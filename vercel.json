@@ -1,6 +1,0 @@
-{
-    "headers": [
-      { "source": "/worker.js", "headers": [{ "key": "Content-Type", "value": "application/javascript" }] }
-    ]
-  }
-  

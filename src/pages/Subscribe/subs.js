@@ -7,6 +7,17 @@ function Subs() {
   useEffect(() => {
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./Worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Error registering Service Worker:', error);
+      });
+  });
+}
+      if ('serviceWorker' in navigator) {
         try {
           // Register service worker
           const registration = await navigator.serviceWorker.register('/worker.js', { scope: '/' });
@@ -40,7 +51,7 @@ function Subs() {
                   console.log('User subscribed:', subscription);
 
                   // Send subscription to API
-                  await fetch("http://localhost:4000/api/subscribe", {
+                  await fetch("http://192.168.1.4:4000/api/subscribe", {
                     method: "POST",
                     body: JSON.stringify({ subscription }),
                     headers: {
