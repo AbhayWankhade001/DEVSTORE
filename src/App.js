@@ -20,7 +20,21 @@ ReactGA.initialize('YOUR_TRACKING_ID');
 
 const App = () => {
   ReactGA.pageview(window.location.pathname + window.location.search);
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered:', registration);
+      })
+      .catch((error) => {
+        console.error('Error registering Service Worker:', error);
+      });
+  }
 
+
+
+
+  
+  
   return (
     <div>
      
