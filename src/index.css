@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 2px; /* Adjust the width as needed */
+}
+::-webkit-scrollbar-x {
+  width: 2px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffb823; /* Set the desired thumb color */
+}
+
+/* For Firefox */
+/* You can set scrollbar-color directly on the container if it's a standalone scrollable container */
+
+
+/* For other browsers (fallback) */
+/* You can add custom styling for other browsers if needed */
+#root{
+  overflow-x: hidden;
+}

@@ -1,0 +1,136 @@
+
+  
+  /* Content Style */
+  .content1 {
+    overflow: hidden;
+    scrollbar-width: thin; /* For Firefox */
+    margin-left: 0;
+  }
+  
+  /* Webkit Styles */
+  .content1{
+    overflow: scroll;
+
+}
+.content1::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.content1::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+.scrolll{
+  height: 150vh;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+@media only screen and (max-width: 640px){
+  .smallD{
+    padding: 28px;
+  }
+
+
+  .innerD{
+    padding: 14px;
+  }
+
+
+  .c2{
+    padding: 6px;
+    overflow: scroll;
+  }
+
+  .scroll{
+    height: 100vh !important;
+  }
+}
+@media only screen and (max-width: 768px){
+  .smallD{
+    padding: 28px !important;
+    width: 100%;
+  }
+
+
+  .innerD{
+    padding: 19px !important;
+   width: 19rem !important;
+  }
+
+
+  .c2{
+    padding: 20px !important;
+    overflow: scroll;
+  }
+  
+  .scroll{
+    height: 100vh !important;
+   
+  }
+
+  
+}
+@media only screen and (min-width: 968px){
+  .smallD{
+    padding: 28px !important;
+    width: 100%;
+ height: 100vh;
+  }
+
+
+  .innerD{
+    padding: 19px !important;
+    width: 37rem !important;
+    height: 30vh;
+  }
+
+
+  .c2{
+    padding: 20px !important;
+    overflow: scroll;
+   
+  }
+  
+  .scroll{
+    height: 100vh !important;
+   
+  }
+
+  
+}
+@media only screen and (min-width: 800px){
+  .smallD{
+    padding: 28px !important;
+    width: 100%;
+ height: 100vh;
+  }
+
+
+  .innerD{
+    padding: 19px !important;
+    width: 40rem !important;
+    height: 70vh !important;
+    scrollbar-width: "2px";
+  }
+
+
+  .c2{
+    padding: 20px !important;
+    overflow: scroll;
+   
+  }
+  
+  .scroll{
+    height: 250vh !important;
+   
+  }
+
+  
+}

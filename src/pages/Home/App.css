@@ -1,0 +1,48 @@
+.gradient-text {
+    background: linear-gradient(90deg, #24A7FF, #BC37F2);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold; /* Adjust the font weight as needed */
+  }
+  
+  .scroll-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    will-change: transform;
+  }
+
+
+  .sticky-box.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+ 
+
+  
+
+@media only screen and (max-width: 640px){
+  .css21{
+  
+    position: relative;
+    right: 0px;
+    scale: 1;
+
+  }
+
+}
+@media only screen and (max-width: 768px){
+  .css21{
+  
+    position: relative;
+    right: 0px;
+    scale: 1;
+
+  }
+
+}
