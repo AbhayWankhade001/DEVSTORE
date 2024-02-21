@@ -12,9 +12,9 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 // Enable CORS for all origins
-app.use(cors(
-  
-));
+app.use(cors({
+  origin: '0.0.0.0/0',
+}));
 
 
 
