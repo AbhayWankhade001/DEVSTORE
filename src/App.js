@@ -16,19 +16,10 @@ import Registertion from './pages/User/Registertion';
 import Login from './pages/User/Login';
 import ReviewForm from './pages/User/Ratingform';
 import Subs from './pages/Subscribe/subs';
-ReactGA.initialize('YOUR_TRACKING_ID');
+ReactGA.initialize('G-3L0S0NBRMP');
 
 const App = () => {
   ReactGA.pageview(window.location.pathname + window.location.search);
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/worker.js')
-      .then((registration) => {
-        console.log('Service Worker registered:', registration);
-      })
-      .catch((error) => {
-        console.error('Error registering Service Worker:', error);
-      });
-  }
 
 
 
@@ -42,7 +33,7 @@ const App = () => {
 
 
      <div><Header/></div>
-     <Subs/>
+
     <Routes>
       
     <Route path="/blog" element={<Blog />} />
