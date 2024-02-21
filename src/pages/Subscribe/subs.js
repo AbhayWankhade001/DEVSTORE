@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 const publicVapidKey = "BB02Q7LhDkRNBbUX2w9kSaazwi7xqr-YOfEtQjgxWZQd2m2EjvG1rd0DvhpaiNhDHIp4Z6R2Iy1A-9k2wRuR1oo";
-const privateVapidKey = "SXep1BOYlc_yalD6Z-bTR-0TXCP1DzTwT7MPxCSL53I";
+
 function Subs() {
   useEffect(() => {
     const registerServiceWorker = async () => {
@@ -16,42 +16,48 @@ function Subs() {
 
           console.log('Service Worker activated');
 
-          // Request notification permission with a custom alert
-          const permission = await new Promise((resolve) => {
-            const userChoice = window.confirm('Allow notifications?');
-            resolve(userChoice ? 'granted' : 'denied');
-          });
+          // Check if Notifications API is supported
+          if ('Notification' in window) {
+            // Request notification permission
+            const permission = await Notification.requestPermission();
+            console.log('Notification permission:', permission);
 
-          console.log('Notification permission:', permission);
+            if (permission === 'granted') {
+              // Check if PushManager is supported
+              if ('PushManager' in window) {
+                // Check if user is already subscribed
+                const existingSubscription = await registration.pushManager.getSubscription();
 
-          if (permission === 'granted') {
-            // Check if user is already subscribed
-            const existingSubscription = await registration.pushManager.getSubscription();
+                if (existingSubscription) {
+                  console.log('User is already subscribed:', existingSubscription);
+                } else {
+                  // Subscribe for the first time
+                  const subscription = await registration.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: publicVapidKey,
+                  });
 
-            if (existingSubscription) {
-              console.log('User is already subscribed:', existingSubscription);
+                  console.log('User subscribed:', subscription);
+
+                  // Send subscription to API
+                  await fetch("http://localhost:4000/api/subscribe", {
+                    method: "POST",
+                    body: JSON.stringify({ subscription }),
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                  });
+
+                  console.log('Subscription sent to API');
+                }
+              } else {
+                console.warn('PushManager is not supported.');
+              }
             } else {
-              // Subscribe for the first time
-              const subscription = await registration.pushManager.subscribe({
-                userVisibleOnly: true,
-                applicationServerKey: publicVapidKey,
-              });
-
-              console.log('User subscribed:', subscription);
-
-              // Send subscription to API
-              await fetch("http://192.168.1.4:4000/api/subscribe", {
-                method: "POST",
-                body: JSON.stringify({ subscription }),
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              });
-
-              console.log('Subscription sent to API');
+              console.warn('Notification permission denied.');
             }
           } else {
-            console.warn('Notification permission denied.');
+            console.warn('Notifications API is not supported.');
           }
         } catch (error) {
           console.error('Error registering service worker:', error);
