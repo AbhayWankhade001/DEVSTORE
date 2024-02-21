@@ -6,6 +6,7 @@ import ServFaq from './ServFaq'
 import ServIncen from './ServIncen'
 import ServPricing from './ServPricing'
 import { ServLast } from './ServLast'
+import { Footer } from '../Home/Footer'
 
 const Service = () => {
   return (
@@ -17,6 +18,7 @@ const Service = () => {
 <ServIncen/>
 <ServPricing/>
 <ServLast/>
+<Footer/>
         </SmoothScroll>
     </div>
   )

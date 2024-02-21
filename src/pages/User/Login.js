@@ -1,6 +1,9 @@
 import React from 'react';
 import {  useNavigate  } from 'react-router';
 import logoimg from '../Home/Artizz_Dev_Bg_Removed.png'
+import { Footer } from '../Home/Footer';
+import { motion } from "framer-motion";
+
 const Login = () => {
     const navigate = useNavigate(); // Initialize useNavigate
    
@@ -76,7 +79,18 @@ const Login = () => {
             <section className="flex justify-center relative " style={{ zIndex: "999999999" }}>
                 <img src="https://pagedone.io/asset/uploads/1702362010.png" alt="gradient background image" className="w-full h-full object-cover fixed" />
                 <div className="mx-auto max-w-lg px-6 lg:px-8 absolute py-20">
-                    <img src={logoimg} alt="pagedone logo" className="mx-auto lg:mb-2 lg:mt-4 mb- w-16 h-16" />
+                    
+                    <motion.div
+
+initial={{ opacity: 0, scale: 0.5 }}
+animate={{ opacity: 1, scale: 1 }}
+transition={{
+  duration: 0.8,
+  delay: 0.5,
+  ease: [0, 0.71, 0.2, 1.01]
+}}
+>   
+<img src={logoimg} alt="pagedone logo" className="mx-auto lg:mb-2 lg:mt-4 mb- w-16 h-16" />
                     <div className="rounded-2xl bg-white shadow-xl">
                         <form onSubmit={handleLogin} className="lg:p-11 p-7 mx-auto">
                             <div className="mb-8">
@@ -91,8 +105,10 @@ const Login = () => {
                             <button type="submit" className="w-full h-12 text-white text-center text-base font-semibold leading-6 rounded-full hover:bg-indigo-800 transition-all duration-700 bg-indigo-600 shadow-sm mb-11">Login</button>
                         </form>
                     </div>
+                    </motion.div>
                 </div>
             </section>
+            <Footer/>
         </div>
     );
 }

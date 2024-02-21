@@ -61,8 +61,8 @@ export const Hero = () => {
                         ease: [0, 0.71, 0.2, 1.01]
                     }}
                 >
-                    <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                        <div class="max-w-xl mx-auto text-center lg:max-w-md xl:max-w-lg lg:text-left lg:mx-0">
+                    <div class="relative px-4 top-24 mx-auto sm:px-6 lg:px-8 max-w-full">
+                        <div class="max-w-xl mx-auto text-center lg:max-w-md xl:max-w-[40rem] lg:text-left lg:mx-0">
                             <h1 class="text-3xl font-bold text-black sm:text-4xl xl:text-5xl xl:leading-tight">
                                 Elevate Your Brand with <span class="text-3xl font-bold sm:text-4xl xl:text-5xl xl:leading-tight gradient-text">Artizz DEV's</span> Digital Excellence
                             </h1>

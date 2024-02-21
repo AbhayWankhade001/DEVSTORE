@@ -1,6 +1,65 @@
-import React from 'react'
 
+import React, { useState , useRef, useEffect} from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+import { useInView } from 'react-intersection-observer';
+const cards = [
+    {
+      imgSrc: 'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-1.png',
+      title: 'How to write content about your photographs',
+      description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.',
+      category: 'Growth',
+      duration: '7 Mins Read',
+    },
+    {
+      imgSrc: 'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-1.png',
+      title: 'How to write content about your photographs',
+      description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.',
+      category: 'Growth',
+      duration: '7 Mins Read',
+    },
+    {
+      imgSrc: 'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-2.png',
+      title: 'How to write content about your photographs',
+      description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.',
+      category: 'Growth',
+      duration: '7 Mins Read',
+    },
+    {
+      imgSrc: 'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-3.png',
+      title: 'How to write content about your photographs',
+      description: 'Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.',
+      category: 'Growth',
+      duration: '7 Mins Read',
+    },
+  ];
 const BlogHero = () => {
+
+
+    const settings = {
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000
+  
+    };
+    
+    // Adjusting slidesToShow based on screen width
+    if (window.innerWidth < 768) { // For mobile devices with a maximum width of 767px
+      settings.slidesToShow = 1;
+    } else { // For desktop devices
+      settings.slidesToShow = 2;
+    }
+    
+
+  
+
+
+  
   return (
     <div>
         <div class="">
@@ -67,94 +126,60 @@ const BlogHero = () => {
                 </div>
             </div>
         </div>
-        <div class="pb-8 lg:absolute lg:inset-0 lg:pb-0">
-            <div class="flex flex-col items-center justify-center overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <div class="flex justify-start w-full gap-6 pb-8 overflow-x-auto snap-x">
-                    <div class="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
-                        <div class="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
-                            <a href="#" title="" class="flex shrink-0 aspect-w-4 aspect-h-3"
-                                ><img class="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-1.png" alt="thumbnail-1"
-                            /></a>
-                            <div class="flex-1 px-4 py-5 sm:p-6">
-                                <a href="#" title="" class="">
-                                    <p class="text-lg font-bold text-gray-900">How to write content about your photographs</p>
-                                    <p class="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.</p></a
-                                >
-                            </div>
-                            <div class="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-2">
-                                        <p class="text-sm font-medium text-gray-900"><a href="#" title="" class="">Growth</a></p>
-                                        <span class="text-sm font-medium text-gray-900">•</span>
-                                        <p class="text-sm font-medium text-gray-900">7 Mins Read</p>
-                                    </div>
-                                    <a href="#" title="" class="" role="button"
-                                        ><svg class="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="17" y1="7" x2="7" y2="17"></line>
-                                            <polyline points="8 7 17 7 17 16"></polyline></svg
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
-                        <div class="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
-                            <a href="#" title="" class="flex shrink-0 aspect-w-4 aspect-h-3"
-                                ><img class="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-2.png" alt="thumbnail-2"
-                            /></a>
-                            <div class="flex-1 px-4 py-5 sm:p-6">
-                                <a href="#" title="" class="">
-                                    <p class="text-lg font-bold text-gray-900">How to write content about your photographs</p>
-                                    <p class="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.</p></a
-                                >
-                            </div>
-                            <div class="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-2">
-                                        <p class="text-sm font-medium text-gray-900"><a href="#" title="" class="">Growth</a></p>
-                                        <span class="text-sm font-medium text-gray-900">•</span>
-                                        <p class="text-sm font-medium text-gray-900">7 Mins Read</p>
-                                    </div>
-                                    <a href="#" title="" class="" role="button"
-                                        ><svg class="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="17" y1="7" x2="7" y2="17"></line>
-                                            <polyline points="8 7 17 7 17 16"></polyline></svg
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
-                        <div class="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
-                            <a href="#" title="" class="flex shrink-0 aspect-w-4 aspect-h-3"
-                                ><img class="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-3.png" alt="thumbnail-3"
-                            /></a>
-                            <div class="flex-1 px-4 py-5 sm:p-6">
-                                <a href="#" title="" class="">
-                                    <p class="text-lg font-bold text-gray-900">How to write content about your photographs</p>
-                                    <p class="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.</p></a
-                                >
-                            </div>
-                            <div class="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-2">
-                                        <p class="text-sm font-medium text-gray-900"><a href="#" title="" class="">Growth</a></p>
-                                        <span class="text-sm font-medium text-gray-900">•</span>
-                                        <p class="text-sm font-medium text-gray-900">7 Mins Read</p>
-                                    </div>
-                                    <a href="#" title="" class="" role="button"
-                                        ><svg class="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <line x1="17" y1="7" x2="7" y2="17"></line>
-                                            <polyline points="8 7 17 7 17 16"></polyline></svg
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="pb-8 lg:absolute lg:inset-0 lg:pb-0 ">
+        <div class="flex flex-col  justify-center  lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+
+        <Slider {...settings}>
+        {cards.map((card, index) => (
+    <div key={index} className="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6" style={{ marginLeft: '-5px', marginRight: '-5px', width:'350px !important' }}>
+    <div className="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
+              <a href="#" title="" className="flex shrink-0 aspect-w-4 aspect-h-3">
+                <img
+                  className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
+                  src={card.imgSrc}
+                  alt={`thumbnail-${index + 1}`}
+                />
+              </a>
+              <div className="flex-1 px-4 py-5 sm:p-6">
+                <a href="#" title="" className="">
+                  <p className="text-lg font-bold text-gray-900">{card.title}</p>
+                  <p className="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">{card.description}</p>
+                </a>
+              </div>
+              <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <p className="text-sm font-medium text-gray-900">
+                      <a href="#" title="" className="">
+                        {card.category}
+                      </a>
+                    </p>
+                    <span className="text-sm font-medium text-gray-900">•</span>
+                    <p className="text-sm font-medium text-gray-900">{card.duration}</p>
+                  </div>
+                  <a href="#" title="" className="" role="button">
+                    <svg
+                      className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <line x1="17" y1="7" x2="7" y2="17"></line>
+                      <polyline points="8 7 17 7 17 16"></polyline>
+                    </svg>
+                  </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+            
                 <div class="flex items-center justify-end mt-2 space-x-5">
                     <div class="w-16 h-[3px] rounded-full bg-gray-900"></div>
                     <div class="w-16 h-[3px] rounded-full bg-gray-300"></div>

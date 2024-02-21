@@ -74,7 +74,7 @@ function Home() {
           </div>  
          <Contact/>
          <Rating/>
-        
+        <Footer/>
           </SmoothScroll>
 </>
       ) : (
@@ -89,7 +89,8 @@ function Home() {
           </div>  
          <Contact/>
          <Rating/>
-    
+         <Footer/>
+
         </>
       )}
     </div>

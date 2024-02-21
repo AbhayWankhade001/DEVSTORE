@@ -50,7 +50,7 @@ const App = () => {
 <Route path='/Login' element={<Login/>}/>
 <Route path='/ReviewForm' element={<ReviewForm/>}/>
     </Routes>
-    <Footer/>
+    
 
       
     </div>
