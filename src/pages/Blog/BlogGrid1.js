@@ -68,10 +68,14 @@
 // }
 
 // export default BlogGrid1
-import React from 'react';
+import React, { useState , useRef, useEffect} from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './BlogGrid.css'
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+
 
 const blogItems = [
   {
@@ -102,32 +106,80 @@ const blogItems = [
 ];
 
 const BlogGrid1 = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+    const slidRef = useRef(null);
+
+
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    arrows: true,
+    beforeChange: (current, next) => setCurrentSlide(next),
+
   };
 
+
+
+   // Adjusting slidesToShow based on screen width
+   if (window.innerWidth < 768) { // For mobile devices with a maximum width of 767px
+    settings.slidesToShow = 1;
+  } else { // For desktop devices
+    settings.slidesToShow = 2;
+  }
+  
+
+const handlePrev = (e) => {
+  e.preventDefault();
+  console.log('sliderRef:', slidRef);
+  if (slidRef.current && slidRef.current.slickPrev) {
+      slidRef.current.slickPrev();
+  }
+};
+
+const handleNex = (e) => {
+  e.preventDefault();
+  console.log('sliderRef:', slidRef);
+  if (slidRef.current && slidRef.current.slickNext) {
+      slidRef.current.slickNext();
+  }
+};
+
+const [ref, inView] = useInView({
+  triggerOnce: true, // Ensures the animation triggers only once
+});
+
+
   return (
+    <motion.div
+    ref={ref}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}>
     <div>
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" style={{display:"flex"}}>
           <div className="flex justify-center  md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
-            <div className="w-full flex justify-between flex-col lg:w-2/5">
+            <div className="w-full flex justify-between flex-col lg:w-2/5 Blogorg">
               <div className="block lg:text-left text-center">
                 <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">Our latest <span className=" text-indigo-600">blogs</span></h2>
                 <p className="text-gray-500 mb-10 max-lg:max-w-xl max-lg:mx-auto">Welcome to our blog section, where knowledge meets inspiration. Explore insightful articles, expert tips, and the latest trends in our field.</p>
                 <a href="javascript:;" className="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100">View All</a>
               </div>
               <div className="flex items-center lg:justify-start justify-center lg:mt-0 mt-4 gap-4">
-                <button id="slider-button-left" className="slider-button group flex justify-center items-center border border-solid border-indigo-600 w-14 h-14 transition-all duration-500 rounded-full hover:bg-indigo-600" data-carousel-prev>
+                <button onClick={(e) => handlePrev(e)}  id="slider-button-left" className="slider-button group flex justify-center items-center border border-solid border-indigo-600 w-14 h-14 transition-all duration-500 rounded-full hover:bg-indigo-600" data-carousel-prev>
                   <svg className="h-6 w-6 text-indigo-600 group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </button>
-                <button id="slider-button-right" className="slider-button group flex justify-center items-center border border-solid border-indigo-600 w-14 h-14 transition-all duration-500 rounded-full hover:bg-indigo-600" data-carousel-next>
+                <button onClick={(e) => handleNex(e)} id="slider-button-right" className="slider-button group flex justify-center items-center border border-solid border-indigo-600 w-14 h-14 transition-all duration-500 rounded-full hover:bg-indigo-600" data-carousel-next>
                   <svg className="h-6 w-6 text-indigo-600 group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
@@ -136,8 +188,8 @@ const BlogGrid1 = () => {
             </div>
           </div>
 
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" style={{width:'45rem'}}>
-        <Slider {...settings}>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 slick-C" style={{width:'45rem'}}>
+        <Slider ref={slidRef} {...settings} >
           {blogItems.map((blogItem, index) => (
             <div key={index} className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
               <div className="w-full max-lg:max-w-xl lg:w-1/2 group">
@@ -163,6 +215,7 @@ const BlogGrid1 = () => {
 
      
     </div>
+    </motion.div>
   );
 };
 

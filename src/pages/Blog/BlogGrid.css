@@ -1,0 +1,10 @@
+.slick-C .slick-list{
+    width: 45rem !important;
+}
+.slick-C .slick-list .slick-slide{
+    width: 40rem !important;
+    margin-right: -275px;
+}
+.slick-C .slick-list .slick-track{
+    width: 10000px !important;
+}

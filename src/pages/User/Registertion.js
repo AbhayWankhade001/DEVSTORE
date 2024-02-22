@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer } from '../Home/Footer';
 import { motion } from "framer-motion";
+import myLOGO from '../Home/Artizz_Dev_Bg_Removed.png'
 const Registertion = () => {
 
     function handleRegs(event) {
@@ -69,7 +70,6 @@ const Registertion = () => {
         });
     }
     
-    document.body.style.overflow = 'hidden';
 
 
     return (
@@ -77,7 +77,7 @@ const Registertion = () => {
             <section className="flex justify-center relative " style={{ zIndex: "999999999" }}>
                 <img src="https://pagedone.io/asset/uploads/1702362010.png" alt="gradient background image" className="w-full h-full object-cover fixed" />
                 <div className="mx-auto max-w-lg absolute">
-                    <img src="https://pagedone.io/asset/uploads/1702362108.png" alt="pagedone logo" className="mx-auto lg:mb-11 mb-8" />
+                    <img src={myLOGO} alt="pagedone logo" className="mx-auto lg:mb-11 mb-8" />
                 <motion.div
 
       initial={{ opacity: 0, scale: 0.5 }}

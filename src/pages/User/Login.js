@@ -72,7 +72,6 @@ const Login = () => {
             navigate('/ReviewForm');
         }
     };
-    document.body.style.overflow = 'hidden';
 
     return (
         <div >
