@@ -1,0 +1,27 @@
+.smooth-scroll {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    white-space: nowrap; /* Prevent line breaks for horizontal scrolling */
+  }
+  
+  .smooth-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+  
+  .smooth-scroll.scrolling {
+    overflow: hidden;
+    pointer-events: none; /* Disable pointer events during scrolling */
+  }
+  
+  .smooth-scroll.scrolling > * {
+    opacity: 0.5; /* Optionally reduce opacity of content during scrolling */
+    transition: opacity 0.5s ease; /* Optionally animate content opacity during scrolling */
+  }
+  
+  .smooth-scroll.scrolling::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera during scrolling */
+  }
+  

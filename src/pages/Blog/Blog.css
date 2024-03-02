@@ -1,0 +1,12 @@
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    width: 350px!important;
+}
+
+.Blogorg{
+    padding-top: 80px;
+    width: 70% !important;
+}
