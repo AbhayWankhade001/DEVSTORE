@@ -408,18 +408,19 @@ const Header = () => {
                   {' '}
                   <Link to='/ContactUs'>Contact Us</Link>{' '}
                 </motion.a>
-                <motion.a
+                {/* <motion.a
+                style={{display:'none'}}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5  , delay: 0.7}}
           className="text-base font-medium text-black">
-             <Link to='/Signup'> <button type="button" class="text-[#ffb923] hover:text-white border border-yellow-400 hover:bg-yellow-500  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 ">   Signup</button></Link>
-              <Link to='/Login'> <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white  ">
-<span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+             <Link style={{display:'none'}} to='/Signup'> <button type="button" class="text-[#ffb923] hover:text-white border border-yellow-400 hover:bg-yellow-500  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 ">   Signup</button></Link>
+              <Link style={{display:'none'}} to='/Login'> <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white  ">
+<span style={{display:'none'}} className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
 Login
 </span>
 </button></Link>
-                </motion.a>
+                </motion.a> */}
               </motion.div>
               </AnimatePresence>
               

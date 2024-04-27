@@ -68,6 +68,13 @@
 // }
 
 // export default BlogGrid1
+
+
+
+
+
+
+
 import React, { useState , useRef, useEffect} from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -109,23 +116,51 @@ const BlogGrid1 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [blogItems , setblogItems] = useState([]);
     const slidRef = useRef(null);
+    const [featuredMedia, setFeaturedMedia] = useState({});
 
 
     useEffect(()=>{
       fetchingBD()
     }, [])
-const fetchingBD = async()=>{
-  try {
-    const response = await fetch('http://localhost:4000/api/posts');
-    const data = await  response.json();
-    setblogItems(data);
-    console.log(data)
-  } catch (error) {
-    console.log('Error fetching blog data:', error)
-  }
-}
 
-  const settings = {
+
+    const fetchFeaturedMedia = async (postId) => {
+      try {
+        const response = await fetch(`https://artizz.in/wp-json/wp/v2/media?parent=${postId}`);
+        const data = await response.json();
+        // Return the first media item if available, otherwise return null
+        return data.length > 0 ? data[0].source_url : null;
+      } catch (error) {
+        console.log('Error fetching featured media for post:', error);
+        return null;
+      }
+    };
+    
+    const fetchingBD = async () => {
+      try {
+        const response = await fetch('https://artizz.in/wp-json/wp/v2/posts');
+        const data = await response.json();
+        setblogItems(data);
+        console.log(data);
+    
+        // Fetch and update featured media for each blog item
+        const updatedBlogItems = await Promise.all(data.map(async (item) => {
+          const featuredMediaUrl = await fetchFeaturedMedia(item.id);
+          return { ...item, featuredMediaUrl };
+        }));
+    
+        console.log('Updated Blog Items:', updatedBlogItems);
+        setblogItems(updatedBlogItems);
+      } catch (error) {
+        console.log('Error fetching blog data:', error);
+      }
+    };
+    
+    // Inside the JSX, update the img src attribute to use blogItem.featuredMediaUrl
+    
+
+
+const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -167,11 +202,23 @@ const [ref, inView] = useInView({
 });
 
 
+
+  // Function to remove HTML tags and limit text to 20 words followed by ellipsis
+  const stripHtmlAndLimitText = (html) => {
+    // Remove HTML tags using a regular expression
+    const plainText = html.replace(/(<([^>]+)>)/gi, '');
+    // Split the text into words
+    const words = plainText.split(' ');
+    // Limit the number of words to 20
+    const limitedText = words.slice(0, 20).join(' ');
+    // Append ellipsis if there are more words
+    return words.length > 20 ? `${limitedText} ...` : limitedText;
+  };
+
   return (
     <motion.div
     ref={ref}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
+      
       transition={{
         duration: 0.8,
         delay: 0.5,
@@ -185,7 +232,7 @@ const [ref, inView] = useInView({
               <div className="block lg:text-left text-center">
                 <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">Our latest <span className=" text-indigo-600">blogs</span></h2>
                 <p className="text-gray-500 mb-10 max-lg:max-w-xl max-lg:mx-auto">Welcome to our blog section, where knowledge meets inspiration. Explore insightful articles, expert tips, and the latest trends in our field.</p>
-                <a href="javascript:;" className="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100">View All</a>
+                {/* <a href="javascript:;" style={{dispaly:"none"}} className="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100" >View All</a> */}
               </div>
               <div className="flex items-center lg:justify-start justify-center lg:mt-0 mt-4 gap-4 pt-20">
                 <button onClick={(e) => handlePrev(e)}  id="slider-button-left" className="slider-button group flex justify-center items-center border border-solid border-indigo-600 w-14 h-14 transition-all duration-500 rounded-full hover:bg-indigo-600" data-carousel-prev>
@@ -208,10 +255,10 @@ const [ref, inView] = useInView({
             <div key={index} className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
               <div className="w-full max-lg:max-w-xl lg:w-1/2 group">
                 <div className="flex items-center mb-9">
-                  <img src={blogItem.thumnail} alt={`blogs tailwind section ${index}`} className="rounded-2xl w-full" />
+                  <img src={blogItem.featuredMediaUrl} alt={`blogs tailwind section ${index}`} className="rounded-2xl w-full" />
                 </div>
-                <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">{blogItem.title}</h3>
-                <p className="text-gray-500 leading-6 transition-all duration-500 mb-8">{blogItem.description}</p>
+                <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">{blogItem.title.rendered}</h3>
+                <div className="text-gray-500 leading-6 transition-all duration-500 mb-8">{stripHtmlAndLimitText(blogItem.excerpt.rendered)}</div>
                 <a href={blogItem.link} className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 font-semibold">
                   Read more
                   <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">

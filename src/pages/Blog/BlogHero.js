@@ -37,17 +37,41 @@ const cards = [
   ];
 const BlogHero = () => {
 
+  const sliderRef = useRef(null);
 
-    const settings = {
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1000
-  
-    };
     
+  const handleBeforeChange = (current, next) => {
+    if (sliderRef.current && sliderRef.current.innerSlider) {
+      const totalSlides = sliderRef.current.innerSlider.state.slideCount;
+  
+      if (current === totalSlides - 1 && next === 0) {
+        // If currently on the last slide and user tries to go to the next slide
+        // Manually move to the first slide without reversing
+        sliderRef.current.slickGoTo(0);
+        return false; // Prevent default behavior
+      } else if (current === 0 && next === totalSlides - 1) {
+        // If currently on the first slide and user tries to go to the previous slide
+        // Manually move to the last slide without reversing
+        sliderRef.current.slickGoTo(totalSlides - 1);
+        return false; // Prevent default behavior
+      }
+    }
+  };
+
+
+  
+  
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    beforeChange: handleBeforeChange,
+
+  };
     // Adjusting slidesToShow based on screen width
     if (window.innerWidth < 768) { // For mobile devices with a maximum width of 767px
       settings.slidesToShow = 1;
@@ -57,14 +81,18 @@ const BlogHero = () => {
     
 
   
+    const [ref, inView] = useInView({
+      triggerOnce: true, // Ensures the animation triggers only once
+    });
 
 
+    
   
   return (
     <div>
         <div class="">
     
-    <section class="relative bg-gray-50">
+    <section class="relative bg-gray-50 pt-36">
         <div class="relative z-10 px-4 py-12 sm:py-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-20 xl:py-28 lg:grid lg:grid-cols-2">
             <div class="lg:pr-8">
                 <div class="max-w-md mx-auto sm:max-w-lg lg:mx-0">
@@ -180,10 +208,7 @@ const BlogHero = () => {
         ))}
       </Slider>
             
-                <div class="flex items-center justify-end mt-2 space-x-5">
-                    <div class="w-16 h-[3px] rounded-full bg-gray-900"></div>
-                    <div class="w-16 h-[3px] rounded-full bg-gray-300"></div>
-                </div>
+              
             </div>
         </div>
     </section>
