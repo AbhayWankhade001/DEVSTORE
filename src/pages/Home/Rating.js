@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import '../Blog/BlogGrid.css';
 import Star from './Star.js';
 import logo from './Artizz_Dev_Bg_Removed.png'
-
+import './slider.css'
 const Rating = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);
@@ -134,7 +134,7 @@ const Rating = () => {
             </div>
          
           </div>
-          <Slider ref={sliderRef} {...settings} className='.slid1'>
+          <Slider ref={sliderRef} {...settings} className='slid1'>
 
           {testimonials.map((data, index) => (
             <div key={index}>
@@ -142,7 +142,7 @@ const Rating = () => {
                 <div class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-[#ffc460]">
                 <Star rating={data.rating} />
                 </div>
-                <p class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800">
+                <p class="text-lg text-gray-500 leading-8 h-32 transition-all duration-500 mb-9 group-hover:text-gray-800">
                 {data.quote}
                 </p>
                 <div class="flex items-center gap-5">
