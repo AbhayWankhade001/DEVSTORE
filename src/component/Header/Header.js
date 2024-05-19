@@ -285,7 +285,7 @@ import { useInView } from 'react-intersection-observer';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Service from '../../pages/Service/Service';
 import Home from '../../pages/Home/Home';
-import LogoArtizz from'./logoArtizz.png';
+import LogoArtizz from'./Artizzlogo-removebg-preview.png';
 const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
