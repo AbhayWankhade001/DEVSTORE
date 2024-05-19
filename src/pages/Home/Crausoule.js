@@ -441,6 +441,7 @@ const StyledCarousel = styled.div`
   .indicator-container {
     max-width: 56px;
     overflow: auto;
+    display:none;
   }
 
   .indicator-container > * {
@@ -456,7 +457,7 @@ const StyledCarousel = styled.div`
   }
 
   .indicator-container > .dots-active {
-    width: 12px;
+    width: 50px;
     height: 6px;
     background-color: #00000096;
     flex-shrink: 0;

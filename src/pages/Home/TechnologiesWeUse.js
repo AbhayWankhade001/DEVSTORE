@@ -29,7 +29,7 @@ const TechnologiesWeUse = () => {
                 role="button"
                 style={{zIndex:'999999', position:"relative"}}
             >
-                Check all apps
+                Check Our Portfolio
             </a>
         </div>
     </div>

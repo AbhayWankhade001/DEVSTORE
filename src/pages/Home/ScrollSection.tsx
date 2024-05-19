@@ -2,13 +2,41 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'; // Importing useInView
 import { users } from './user.js';
 import "./scroll.css"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 export const Scroll = () => {
+  const [HeightS, setHeightS] = useState(1);
+
   const [ref, inView] = useInView({
     triggerOnce: true, // Ensures the animation triggers only once
   });
+  useEffect(() => {
+    const updateDimensions = () => {
+      const width = window.innerWidth;
+      if (width <= 700) {
+        // Mobile
+        setHeightS(200);
+      } else if (width <= 1024) {
+        // Tablet
+        setHeightS(150);
+      } else {
+        // Desktop
+        setHeightS(100);
+      }
+    };
+
+    // Set dimensions initially
+    updateDimensions();
+
+    // Update dimensions on window resize
+    window.addEventListener('resize', updateDimensions);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateDimensions);
+    };
+  }, []);
 return (
 <motion.div
 ref={ref}
@@ -19,7 +47,7 @@ ref={ref}
     delay: 0.2,
     ease: [0, 0.71, 0.2, 1.01],
   }}>
-    <div className="flex flex-col bg-white h-[80vh]">
+    <div className="flex flex-col bg-white h-[30vh]">
       <ScrollCore />
     </div>
     </motion.div>
@@ -32,19 +60,19 @@ export const ScrollCore = () => {
 
   const rotate = useTransform(
     scrollYProgress,
-    [0, 0.5, 0.6, 1], // Divide the range [0, 1] into three parts: [0, 0.5], [0.5, 1]
-    [360, 50,0, -0] // Corresponding output values for each range
+    [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9, 1], // Divide the range [0, 1] into three parts: [0, 0.5], [0.5, 1]
+    [360,324, 300,276,254,230,0,0,0,0, -0] // Corresponding output values for each range
   );
     const scale = useTransform(scrollYProgress, [0,0.5,0.8, 1], [0, 1, 1.3 ,0 ]);
-  const translate = useTransform(scrollYProgress, [0, 1], [60, 0]);
+  const translate = useTransform(scrollYProgress, [0, 1], [50, 0]);
   const translateH = useTransform(scrollYProgress, [0, 1], [-200, 0]);
   const transitionDuration = `transform ${0.1 / scrollYProgress}s ease-in-out`;
 
-  // Adjusting rotate value based on inView
+  // Adjusting rotate value based on inView 
   const rotatedValue = inView ? 0 : rotate;
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="h-[25vh] flex items-center justify-center">
       <div
         className="w-full relative smallD"
         style={{
