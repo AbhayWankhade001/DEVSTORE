@@ -38,6 +38,41 @@ const cards = [
 const BlogHero = () => {
 
   const sliderRef = useRef(null);
+  const [HblogItem , setHblogItems] = useState([]);
+    const [HfeaturedMedia, setFFeaturedMedia] = useState({})
+
+
+  const HfetchFeaturedMedia = async (postId) => {
+    try {
+      const response = await fetch(`https://artizz.in/wp-json/wp/v2/media?parent=${postId}`);
+      const data = await response.json();
+      // Return the first media item if available, otherwise return null
+      return data.length > 0 ? data[0].source_url : null;
+    } catch (error) {
+      console.log('Error fetching featured media for post:', error);
+      return null;
+    }
+  };
+
+  const fetchingBD = async () => {
+    try {
+      const response = await fetch('https://artizz.in/wp-json/wp/v2/posts');
+      const data = await response.json();
+      setHblogItems(data);
+      console.log(data);
+  
+      // Fetch and update featured media for each blog item
+      const updatedBlogItems = await Promise.all(data.map(async (item) => {
+        const featuredMediaUrl = await HfetchFeaturedMedia(item.id);
+        return { ...item, featuredMediaUrl };
+      }));
+  
+      console.log('Updated Blog Items:', updatedBlogItems);
+      setHblogItems(updatedBlogItems);
+    } catch (error) {
+      console.log('Error fetching blog data:', error);
+    }
+  };
 
     
   const handleBeforeChange = (current, next) => {
@@ -85,6 +120,17 @@ const BlogHero = () => {
       triggerOnce: true, // Ensures the animation triggers only once
     });
 
+  // Function to remove HTML tags and limit text to 20 words followed by ellipsis
+  const HstripHtmlAndLimitText = (html) => {
+    // Remove HTML tags using a regular expression
+    const plainText = html.replace(/(<([^>]+)>)/gi, '');
+    // Split the text into words
+    const words = plainText.split(' ');
+    // Limit the number of words to 20
+    const limitedText = words.slice(0, 20).join(' ');
+    // Append ellipsis if there are more words
+    return words.length > 20 ? `${limitedText} ...` : limitedText;
+  };
 
     
   
@@ -158,20 +204,20 @@ const BlogHero = () => {
         <div class="flex flex-col  justify-center  lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
 
         <Slider {...settings}>
-        {cards.map((card, index) => (
+        {HblogItem.map((HblogItems, index) => (
     <div key={index} className="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6" style={{ marginLeft: '-5px', marginRight: '-5px', width:'350px !important' }}>
     <div className="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
               <a href="#" title="" className="flex shrink-0 aspect-w-4 aspect-h-3">
                 <img
                   className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
-                  src={card.imgSrc}
+                  src={HblogItems.featuredMediaUrl}
                   alt={`thumbnail-${index + 1}`}
                 />
               </a>
               <div className="flex-1 px-4 py-5 sm:p-6">
-                <a href="#" title="" className="">
-                  <p className="text-lg font-bold text-gray-900">{card.title}</p>
-                  <p className="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">{card.description}</p>
+                <a href={HblogItems.link} title="" className="">
+                  <p className="text-lg font-bold text-gray-900">{HblogItems.title.rendered}</p>
+                  <p className="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">{HstripHtmlAndLimitText(HblogItems.excerpt.rendered)}</p>
                 </a>
               </div>
               <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
@@ -179,11 +225,11 @@ const BlogHero = () => {
                   <div className="flex items-center space-x-2">
                     <p className="text-sm font-medium text-gray-900">
                       <a href="#" title="" className="">
-                        {card.category}
+                        {/* {card.category} */}
                       </a>
                     </p>
                     <span className="text-sm font-medium text-gray-900">•</span>
-                    <p className="text-sm font-medium text-gray-900">{card.duration}</p>
+                    <p className="text-sm font-medium text-gray-900"></p>
                   </div>
                   <a href="#" title="" className="" role="button">
                     <svg
