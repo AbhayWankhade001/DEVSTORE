@@ -61,7 +61,7 @@ export const ScrollCore = () => {
   const rotate = useTransform(
     scrollYProgress,
     [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9, 1], // Divide the range [0, 1] into three parts: [0, 0.5], [0.5, 1]
-    [360,324, 300,276,222,60,0,0,0,0, -0] // Corresponding output values for each range
+    [0,0,0,0,360,80,0,0,0,0, -0] // Corresponding output values for each range
   );
     const scale = useTransform(scrollYProgress, [0,0.5,0.8, 1], [0, 1, 1.3 ,0 ]);
   const translate = useTransform(scrollYProgress, [0, 1], [50, 0]);
@@ -119,7 +119,7 @@ const Card = ({ rotate, scale, translate ,transitionDuration}: {  scale: any; tr
         }}
         className="max-w-5xl -mt-12 mx-auto h-[30rem]  w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl innerD"
       >
-        <div className="bg-gray-100 h-full w-full rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-4 overflow-hidden content1 c2" style={{overflow:"scroll"}}>
+        <div className="bg-gray-100 h-full w-full rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-4 overflow-hidden content1 c2" style={{overflow:"scroll", scrollbarWidth: "none"}}>
           {users.map((user, idx) => (
             <motion.div
               key={`user-${idx}`}
