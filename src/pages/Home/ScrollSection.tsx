@@ -61,7 +61,7 @@ export const ScrollCore = () => {
   const rotate = useTransform(
     scrollYProgress,
     [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9, 1], // Divide the range [0, 1] into three parts: [0, 0.5], [0.5, 1]
-    [360,324, 300,276,80,0,0,0,0,0, -0] // Corresponding output values for each range
+    [360,324, 300,276,222,60,0,0,0,0, -0] // Corresponding output values for each range
   );
     const scale = useTransform(scrollYProgress, [0,0.5,0.8, 1], [0, 1, 1.3 ,0 ]);
   const translate = useTransform(scrollYProgress, [0, 1], [50, 0]);
