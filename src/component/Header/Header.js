@@ -285,6 +285,7 @@ import { useInView } from 'react-intersection-observer';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Service from '../../pages/Service/Service';
 import Home from '../../pages/Home/Home';
+import LogoArtizz from'./logoArtizz.png';
 const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -321,7 +322,7 @@ const Header = () => {
       }}
     >
                   <a href="#" title="" className="flex">
-                    <img src={logoImage} className='w-auto h-40' alt=''/>
+                    <img src={LogoArtizz} className='w-auto h-40' alt=''/>
                   </a>
                   </motion.div>
                 </div>
@@ -439,7 +440,7 @@ Login
           ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}
         >
           <div className="mb-12">
-            <h1 className="text-2xl font-semibold">Sidebar Nav</h1>
+            <h1 className="text-2xl font-semibold"></h1>
           </div>
           <AnimatePresence>
             {isSidebarOpen && (
