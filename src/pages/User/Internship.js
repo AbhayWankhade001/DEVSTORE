@@ -52,7 +52,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
       // Redirect to Razorpay payment page
       const options = {
         key: Razpay,
-        amount: 599, // Amount in paise (₹599)
+        amount: 199, // Amount in paise (₹599)
         currency: 'INR',
         name: 'VigronaVigrona Ventures pvt Ltd',
         description: 'Internship Application Registration',
