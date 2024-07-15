@@ -54,7 +54,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
         key: Razpay,
         amount: 199, // Amount in paise (₹599)
         currency: 'INR',
-        name: 'VigronaVigrona Ventures pvt Ltd',
+        name: 'Vigrona Ventures pvt Ltd',
         description: 'Internship Application Registration',
         handler: async function (response) {
           try {
