@@ -72,7 +72,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
             // Optionally redirect after 3 seconds
             setTimeout(() => {
               setModalIsOpen(false);
-              // window.location.href = 'https://artizz.store';
+              window.location.href = 'https://artizz.store';
             }, 3000);
           } catch (error) {
             console.error('Error updating payment status:', error);
