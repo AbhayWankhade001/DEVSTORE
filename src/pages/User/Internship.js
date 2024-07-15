@@ -105,7 +105,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
 
   return (
     <div className="max-w-md mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Internship Application Form</h2>
+      <h2 className="text-2xl font-bold mb-4 mt-16">Internship Application Form</h2>
       {error && <div className="mb-4 text-red-500">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
