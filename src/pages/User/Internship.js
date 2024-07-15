@@ -36,7 +36,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3001/api/formData', {
+      const response = await fetch('https://devstore-backend.vercel.app/api/formData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
         handler: async function (response) {
           try {
             // Update payment status on backend
-            await fetch(`http://localhost:3001/api/payment/${formDataResult._id}`, {
+            await fetch(`https://devstore-backend.vercel.app/api/payment/${formDataResult._id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json'
