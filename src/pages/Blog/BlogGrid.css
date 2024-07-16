@@ -35,7 +35,7 @@ display: none !important;
     
     }
     .css02{
-        width: 25%;
+        width: 25% !important;
         display: inline-block;
     
     }
@@ -52,7 +52,7 @@ display: none !important;
     }
 
     .css02{
-        width: 25%;
+        width: 25% !important;
         display: inline-block;
     
     }
