@@ -1,7 +1,7 @@
 .silck-list{
 height: 100vh;
 }
-.css010{
+.slick-slider.slick-initialized.silck-list{
     padding-left: 330px;
 
 }
@@ -37,7 +37,7 @@ height: 100vh;
     }
   }
   @media only screen and (max-width: 768px){
-  .slick-list{
+    .slick-slider .slick-initialized .slick-list{
         height: 550px;
            width: 43.5rem !important;
            padding-left: 0px;
