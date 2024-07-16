@@ -116,7 +116,7 @@ const BlogHero = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
     beforeChange: handleBeforeChange,
     pauseOnHover: true
