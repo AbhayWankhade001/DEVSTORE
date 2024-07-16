@@ -203,7 +203,7 @@ const BlogHero = () => {
                 </div>
             </div>
         </div>
-        <div class="pb-8 lg:absolute lg:inset-0 lg:pb-0 ">
+        <div class="pb-8 lg:absolute lg:inset-0 lg:pb-0 css09 ">
         <div class="flex flex-col  justify-center  lg:absolute lg:inset-y-0 lg:right-0 lg:w-[45%]">
 
         <Slider {...settings}>

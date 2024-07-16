@@ -17,8 +17,8 @@ height: 100vh;
 }
 
 @media only screen and (max-width: 640px){
-    .slick-C .slick-list{
-     height: 80vh;
+    .slick-list{
+     height: 550px;
         width: 43.5rem !important;
         }
 
@@ -27,11 +27,13 @@ height: 100vh;
         display: inline-block;
     
     }
-        
+    .css09{
+        padding-right: 20px;
+    }
   }
   @media only screen and (max-width: 768px){
-    .slick-C .slick-list{
-        height: 80vh;
+  .slick-list{
+        height: 550px;
            width: 43.5rem !important;
            }
         
@@ -39,5 +41,9 @@ height: 100vh;
             width: 25% !important;
             display: inline-block;
         
+        }
+
+        .css09{
+            padding-right: 20px;
         }
 }
