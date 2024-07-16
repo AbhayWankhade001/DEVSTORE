@@ -116,10 +116,10 @@ const BlogHero = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: false,
+    autoplaySpeed: 5000,
     beforeChange: handleBeforeChange,
-
+    pauseOnHover: true
   };
     // Adjusting slidesToShow based on screen width
     if (window.innerWidth < 768) { // For mobile devices with a maximum width of 767px
