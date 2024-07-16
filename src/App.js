@@ -34,7 +34,7 @@ const App = () => {
     <div>
      
 
-
+<SpeedInsights/>
 
      <div><Header/></div>
 
