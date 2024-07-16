@@ -204,7 +204,7 @@ const BlogHero = () => {
             </div>
         </div>
         <div class="pb-8 lg:absolute lg:inset-0 lg:pb-0 ">
-        <div class="flex flex-col  justify-center  lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div class="flex flex-col  justify-center  lg:absolute lg:inset-y-0 lg:right-0 lg:w-[45%]">
 
         <Slider {...settings}>
         {blogItemHero.map((card, index) => (
