@@ -43,6 +43,12 @@ display: none !important;
         margin-right: -411px;
         width: 71rem !important;
     }
+    .css04{
+        padding-bottom: 5px !important;
+    }
+    .css03{
+        width: 100% !important;
+    }
         
   }
   @media only screen and (max-width: 768px){
@@ -55,6 +61,12 @@ display: none !important;
         width: 25% !important;
         display: inline-block;
     
+    }
+    .css03{
+        width: 100% !important;
+    }
+    .css04{
+        padding-bottom: 5px !important;
     }
     .slick-C .slick-list .slick-slide {
         margin-right: -411px;
