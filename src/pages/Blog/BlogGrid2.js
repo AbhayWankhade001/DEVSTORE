@@ -51,17 +51,43 @@
 // export default BlogGrid2
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const BlogGrid2 = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('https://artizz.in/wp-json/wp/v2/posts?per_page=3')
-      .then(response => response.json())
-      .then(data => setPosts(data))
-      .catch(error => console.error('Error fetching posts:', error));
+    fetchingBD();
   }, []);
+
+  const fetchFeaturedMedia = async (postId) => {
+    try {
+      const response = await fetch(`https://artizz.in/wp-json/wp/v2/media?parent=${postId}`);
+      const data = await response.json();
+      return data.length > 0 ? data[0].source_url : null;
+    } catch (error) {
+      console.log('Error fetching featured media for post:', error);
+      return null;
+    }
+  };
+
+  const fetchingBD = async () => {
+    try {
+      const response = await fetch('https://artizz.in/wp-json/wp/v2/posts?per_page=3');
+      const data = await response.json();
+      
+      const updatedPosts = await Promise.all(
+        data.map(async (post) => {
+          const featuredMediaUrl = await fetchFeaturedMedia(post.id);
+          return { ...post, featuredMediaUrl };
+        })
+      );
+
+      setPosts(updatedPosts);
+    } catch (error) {
+      console.log('Error fetching blog data:', error);
+    }
+  };
 
   return (
     <div>
