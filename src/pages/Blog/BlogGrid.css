@@ -24,7 +24,9 @@ display: none !important;
 
 
 
-
+.css05{
+    display: flex;
+}
 
 
 
@@ -49,6 +51,10 @@ display: none !important;
     .css03{
         width: 100% !important;
     }
+    .css05{
+        display: flex;
+        flex-direction: column;
+    }
 
     .Blogorg{
         padding-top: 80px;
@@ -70,9 +76,15 @@ display: none !important;
     }
     .css03{
         width: 100% !important;
+
     }
     .css04{
         padding-bottom: 5px !important;
+    }
+
+    .css05{
+        display: flex;
+        flex-direction: column;
     }
     .slick-C .slick-list .slick-slide {
         margin-right: -411px;
