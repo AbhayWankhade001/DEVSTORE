@@ -23,3 +23,23 @@ display: none !important;
 }
 
 
+
+
+
+
+
+@media only screen and (max-width: 640px){
+    .css01{
+        display: flex;
+        flex-direction: column;
+    
+    }
+        
+  }
+  @media only screen and (max-width: 768px){
+    .css01{
+        display: flex;
+        flex-direction: column;
+    
+    }
+}
