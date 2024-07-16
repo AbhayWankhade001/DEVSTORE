@@ -1,11 +1,16 @@
 .silck-list{
 height: 100vh;
 }
-
-
 .slick-slide {
+    display: flex !important;
+    justify-content: center;
     width: auto!important;
+
 }
+
+/* 
+.slick-slide {
+} */
 
 .css07{
     width: 20rem !important;
@@ -19,22 +24,12 @@ height: 100vh;
         width: 43.5rem !important;
         }
 
-         .css08{
-        width: 25% !important;
-        display: inline-block;
-    
-    }
-    .slick-slide {
-        float: right !important;
-        height: 100% !important;
-        min-height: 1px !important;
-        width: auto !important;
-    }
-
-    .first\:pl-6:first-child {
-        padding-left: 4.5rem !important;
-    }
-        
+        .css08 {
+            width: 100%; /* Ensure the card takes full width on small devices */
+            display: flex;
+            justify-content: center;
+        }
+   
   }
   @media only screen and (max-width: 768px){
     .slick-C .slick-list{
@@ -42,11 +37,7 @@ height: 100vh;
            width: 43.5rem !important;
            }
         
-        .css08{
-            width: 25% !important;
-            display: inline-block;
-        
-        }
+     
         .slick-slide {
             float: right!important;
             height: 100% !important;
@@ -54,8 +45,10 @@ height: 100vh;
             width: auto !important;
         }
 
-        .first\:pl-6:first-child {
-            padding-left: 4.5rem !important;
+        .css08 {
+            width: 100%; /* Ensure the card takes full width on small devices */
+            display: flex;
+            justify-content: center;
         }
         
 }
