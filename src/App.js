@@ -17,7 +17,9 @@ import Login from './pages/User/Login';
 import InternshipForm from './pages/User/Internship.js';
 import ReviewForm from './pages/User/Ratingform';
 import Subs from './pages/Subscribe/subs';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 ReactGA.initialize('G-3L0S0NBRMP');
+
 
 const App = () => {
   ReactGA.pageview(window.location.pathname + window.location.search);
