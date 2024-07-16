@@ -29,6 +29,13 @@ display: none !important;
 }
 
 
+.css06{
+    width: 20rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+
 
 @media only screen and (max-width: 640px){
     .css01{
@@ -61,6 +68,13 @@ display: none !important;
         width: 100% !important;
         padding-bottom: 80px;
     }
+
+
+    .css06{
+        width: 10rem;
+        height: 5rem;
+        object-fit: contain;
+    }
         
   }
   @media only screen and (max-width: 768px){
@@ -86,6 +100,13 @@ display: none !important;
         display: flex;
         flex-direction: column;
     }
+    
+    .css06{
+        width: 10rem;
+        height: 5rem;
+        object-fit: contain;
+    }
+    
     .slick-C .slick-list .slick-slide {
         margin-right: -411px;
         width: 71rem !important;

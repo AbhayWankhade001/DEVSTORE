@@ -258,7 +258,7 @@ const [ref, inView] = useInView({
             <div key={index} className="flex css02 justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
               <div className="w-full max-lg:max-w-xl lg:w-1/2 group">
                 <div className="flex items-center mb-9">
-                  <img src={blogItem.featuredMediaUrl} alt={`blogs tailwind section ${index}`} className="rounded-2xl w-full" />
+                  <img src={blogItem.featuredMediaUrl} alt={`blogs tailwind section ${index}`} className="rounded-2xl css06" />
                 </div>
                 <h3 className="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-600">{blogItem.title.rendered}</h3>
                 <div className="text-gray-500 leading-6 transition-all duration-500 mb-8">{stripHtmlAndLimitText(blogItem.excerpt.rendered)}</div>
