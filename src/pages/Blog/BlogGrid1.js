@@ -255,7 +255,7 @@ const [ref, inView] = useInView({
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 slick-C" style={{width:'45rem'}}>
         <Slider ref={slidRef} {...settings} >
           {blogItems.map((blogItem, index) => (
-            <div key={index} className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
+            <div key={index} className="flex css02 justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
               <div className="w-full max-lg:max-w-xl lg:w-1/2 group">
                 <div className="flex items-center mb-9">
                   <img src={blogItem.featuredMediaUrl} alt={`blogs tailwind section ${index}`} className="rounded-2xl w-full" />
