@@ -164,7 +164,7 @@ const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     beforeChange: (current, next) => setCurrentSlide(next),
@@ -177,7 +177,7 @@ const settings = {
    if (window.innerWidth < 768) { // For mobile devices with a maximum width of 767px
     settings.slidesToShow = 1;
   } else { // For desktop devices
-    settings.slidesToShow = 2;
+    settings.slidesToShow = 1;
   }
   
 
