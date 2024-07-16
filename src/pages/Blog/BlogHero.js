@@ -113,11 +113,11 @@ const BlogHero = () => {
 
   const settings = {
     dots: true,
-    infinite: true,
-    slidesToShow: 3,
+    infinite: false,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 3000,
     beforeChange: handleBeforeChange,
 
   };
