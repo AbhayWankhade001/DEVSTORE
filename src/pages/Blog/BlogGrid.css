@@ -1,5 +1,5 @@
 .slick-C .slick-list{
-    width: 45rem !important;
+    width: 43.7rem !important;
 }
 .slick-C .slick-list .slick-slide{
     width: 40rem !important;
@@ -73,7 +73,6 @@ display: none !important;
     .css06{
         width: 10rem;
         height: 5rem;
-        object-fit: contain;
     }
         
   }
@@ -104,9 +103,8 @@ display: none !important;
     .css06{
         width: 10rem;
         height: 5rem;
-        object-fit: contain;
     }
-    
+
     .slick-C .slick-list .slick-slide {
         margin-right: -411px;
         width: 71rem !important;
