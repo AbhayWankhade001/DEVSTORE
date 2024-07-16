@@ -1,8 +1,10 @@
 .silck-list{
 height: 100vh;
-padding-left: 330px;
 }
+.css010{
+    padding-left: 330px;
 
+}
 
 .slick-slide {
     float: right;

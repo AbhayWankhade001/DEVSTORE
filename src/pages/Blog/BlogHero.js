@@ -206,7 +206,7 @@ const BlogHero = () => {
         <div class="pb-8 lg:absolute lg:inset-0 lg:pb-0 css09 ">
         <div class="flex flex-col  justify-center  lg:absolute lg:inset-y-0 lg:right-0 lg:w-[45%]">
 
-        <Slider {...settings}>
+        <Slider {...settings} className='css010'>
         {blogItemHero.map((card, index) => (
     <div key={index} className="relative snap-start scroll-ml-6 css08 shrink-0 first:pl-6 last:pr-6" style={{ marginLeft: '-5px', marginRight: '-5px' }}>
     <div className="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
