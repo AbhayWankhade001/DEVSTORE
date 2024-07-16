@@ -98,7 +98,7 @@ const BlogGrid2 = () => {
             {posts.map(post => (
               <div key={post.id} className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
                 <div className="flex items-center">
-                  <img src={post.featuredMediaUrl || 'default-image-url.jpg'} alt={post.title.rendered} className="rounded-t-2xl w-full" />
+                  <img src={post.featuredMediaUrl || 'default-image-url.jpg'} alt={post.title.rendered} className="rounded-t-2xl h-[15rem] w-full" />
                 </div>
                 <div className="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
                   <span className="text-indigo-600 font-medium mb-3 block">{new Date(post.date).toLocaleDateString()}</span>
