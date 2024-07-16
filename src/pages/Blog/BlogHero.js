@@ -208,7 +208,7 @@ const BlogHero = () => {
 
         <Slider {...settings}>
         {blogItemHero.map((card, index) => (
-    <div key={index} className="relative snap-start scroll-ml-6 css08 shrink-0 first:pl-6 last:pr-6" style={{ marginLeft: '-5px', marginRight: '-5px' }}>
+    <div key={index} className="relative snap-start scroll-ml-6 css08 shrink-0 first:pl-6 last:pr-6" style={{ marginLeft: '-5px', marginRight: '-5px', width:'350px !important' }}>
     <div className="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
               <a href="#" title="" className="flex shrink-0 aspect-w-4 aspect-h-3">
                 <img
