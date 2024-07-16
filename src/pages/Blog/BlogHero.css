@@ -9,8 +9,8 @@ height: 100vh;
 }
 
 @media only screen and (max-width: 640px){
-    .silck-list{
-        height: 80vh;
+    .slick-C .slick-list{
+     height: 80vh;
         width: 43.5rem !important;
         }
 
@@ -22,10 +22,10 @@ height: 100vh;
         
   }
   @media only screen and (max-width: 768px){
-    .silck-list{
+    .slick-C .slick-list{
         height: 80vh;
-        width: 43.5rem !important;
-        }
+           width: 43.5rem !important;
+           }
         
         .css08{
             width: 25% !important;
