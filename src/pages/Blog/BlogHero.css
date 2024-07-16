@@ -3,9 +3,9 @@ height: 100vh;
 }
 
 .css07{
-    width: 20rem;
-    height: 20rem;
-    object-fit: fill;
+    width: 20rem !important;
+    height: 20rem !important;
+    object-fit: fill !important;
 }
 
 @media only screen and (max-width: 640px){
