@@ -4,10 +4,10 @@ height: 100vh;
 
 
 .slick-slide {
-    float: right;
-    height: 100%;
-    min-height: 1px;
-    width: auto;
+    float: right !important;
+    height: 100% !important;
+    min-height: 1px !important;
+    width: auto !important;
 }
 
 .css07{
@@ -28,13 +28,13 @@ height: 100vh;
     
     }
     .slick-slide {
-        float: right;
-        height: 100%;
-        min-height: 1px;
-        width: auto;
+        float: right !important;
+        height: 100% !important;
+        min-height: 1px !important;
+        width: auto !important;
     }
     .last\:pr-6:last-child {
-        padding-right: 3.5rem;
+        padding-right: 3.5rem !important;
     }
     
     .first\:pl-6:first-child {
@@ -54,10 +54,10 @@ height: 100vh;
         
         }
         .slick-slide {
-            float: right;
-            height: 100%;
-            min-height: 1px;
-            width: auto;
+            float: right !important;
+            height: 100% !important;
+            min-height: 1px !important;
+            width: auto !important;
         }
 
 
