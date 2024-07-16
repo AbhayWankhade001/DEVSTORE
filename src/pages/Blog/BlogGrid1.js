@@ -229,9 +229,9 @@ const [ref, inView] = useInView({
       }}>
     <div>
       <section className="py-24">
-        <div className="mx-auto css03 max-w-7xl px-4 sm:px-6 lg:px-8 css01" >
-          <div className="flex justify-center  md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
-            <div className="w-full flex justify-between flex-col lg:w-2/5 Blogorg">
+        <div className="mx-auto css03 max-w-7xl px-4 sm:px-6 lg:px-8 " >
+          <div className="flex justify-center  md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8 ">
+            <div className="w-full flex justify-between flex-col lg:w-2/5 Blogorg css01">
               <div className="block lg:text-left text-center">
                 <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">Our latest <span className=" text-indigo-600">blogs</span></h2>
                 <p className="text-gray-500 mb-10 max-lg:max-w-xl max-lg:mx-auto">Welcome to our blog section, where knowledge meets inspiration. Explore insightful articles, expert tips, and the latest trends in our field.</p>
