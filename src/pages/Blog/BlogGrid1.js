@@ -175,9 +175,12 @@ const settings = {
 
    // Adjusting slidesToShow based on screen width
    if (window.innerWidth < 768) { // For mobile devices with a maximum width of 767px
-    settings.slidesToShow = 1;
+    settings.slidesToShow = 1
+    settings.slidesToScroll= 1
   } else { // For desktop devices
-    settings.slidesToShow = 1;
+    settings.slidesToShow = 1
+    settings.slidesToScroll= 1
+
   }
   
 
