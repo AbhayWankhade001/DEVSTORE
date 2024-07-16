@@ -49,6 +49,12 @@ display: none !important;
     .css03{
         width: 100% !important;
     }
+
+    .Blogorg{
+        padding-top: 80px;
+        width: 100% !important;
+        padding-bottom: 80px;
+    }
         
   }
   @media only screen and (max-width: 768px){
@@ -71,5 +77,11 @@ display: none !important;
     .slick-C .slick-list .slick-slide {
         margin-right: -411px;
         width: 71rem !important;
+    }
+    .Blogorg{
+    
+        padding-top: 80px;
+        width: 100% !important;
+        padding-bottom: 80px;
     }
 }
