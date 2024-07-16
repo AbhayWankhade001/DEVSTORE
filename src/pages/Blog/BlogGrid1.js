@@ -229,7 +229,7 @@ const [ref, inView] = useInView({
       }}>
     <div>
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  sm:flex-col" style={{display:"flex"}}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 sm:flex-col lg:px-8" style={{display:"flex"}}>
           <div className="flex justify-center  md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
             <div className="w-full flex justify-between flex-col lg:w-2/5 Blogorg">
               <div className="block lg:text-left text-center">
