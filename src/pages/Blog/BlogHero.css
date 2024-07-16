@@ -3,12 +3,12 @@ height: 100vh;
 }
 
 
-.slick-slide {
+/* .slick-slide {
     float: right !important;
     height: 100% !important;
     min-height: 1px !important;
-    width: auto !important;
-}
+    width: auto ;
+} */
 
 .css07{
     width: 20rem !important;
