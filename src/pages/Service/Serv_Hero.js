@@ -1,5 +1,9 @@
 import React from 'react'
 import HeroImage from '../Home/yello_service image.png'
+import Logo1 from './assets/JS.jpg'
+import Logo2 from './assets/Angular.jpg'
+import Logo3 from './assets/Shopify.jpg'
+import Logo4 from './assets/Wordpress.jpg'
 export const Serv_Hero = () => {
   return (
     <div>
@@ -20,10 +24,12 @@ export const Serv_Hero = () => {
 
                         <div class="mt-8 lg:mt-12 lg:flex lg:items-center">
                             <div class="flex justify-center flex-shrink-0 -space-x-4 overflow-hidden lg:justify-start">
-                                <img class="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://d33wubrfki0l68.cloudfront.net/3bfa6da479d6b9188c58f2d9a8d33350290ee2ef/301f1/images/hero/3/avatar-male.png" alt="" />
-                                <img class="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://d33wubrfki0l68.cloudfront.net/b52fa09a115db3a80ceb2d52c275fadbf84cf8fc/7fd8a/images/hero/3/avatar-female-1.png" alt="" />
-                                <img class="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://d33wubrfki0l68.cloudfront.net/8a2efb13f103a5ae2909e244380d73087a9c2fc4/31ed6/images/hero/3/avatar-female-2.png" alt="" />
-                            </div>
+                                <img class="inline-block rounded-full w-14 h-14 ring-2 ring-white" src={Logo1} alt="" />
+                                <img class="inline-block rounded-full w-14 h-14 ring-2 ring-white" src={Logo2} alt="" />
+                                <img class="inline-block rounded-full w-14 h-14 ring-2 ring-white" src={Logo3} alt="" />
+                                <img class="inline-block rounded-full w-14 h-14 ring-2 ring-white" src={Logo4} alt="" />
+                               
+                                         </div>
 
                             <p class="mt-4 text-lg text-gray-900 lg:mt-0 lg:ml-4 font-pj">Check out<span class="font-bold"> Top services</span> and make your online presence better with us</p>
                         </div>

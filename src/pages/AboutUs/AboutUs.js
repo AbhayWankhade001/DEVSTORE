@@ -45,13 +45,12 @@ const AboutUs = () => {
             <div class="lg:pr-24 flex items-center">
               <div class="data w-full">
                 <img src="https://pagedone.io/asset/uploads/1702034785.png" alt="About Us tailwind page" class="block lg:hidden mb-9 mx-auto" />
-                <h2 class="font-manrope font-bold text-4xl lg:text-5xl text-black mb-9 max-lg:text-center">We
-                  are Creative Since 2005</h2>
+                <h2 class="font-manrope font-bold text-4xl lg:text-5xl text-black mb-9 max-lg:text-center">Artizzdev The Story of Development</h2>
                 <p class="font-normal text-xl leading-8 text-gray-500 max-lg:text-center max-w-2xl mx-auto">
-                  Pagedone isn’t just a collection of components and guidelines; it's a philosophy. We go
-                  beyond aesthetics, prioritizing accessibility, scalability, and usability. Every element, from the tiniest
-                  detail to the grandest layout, is meticulously crafted to enhance functionality and elevate user
-                  satisfaction.
+                Artizzdev, a child company of Vigrona Ventures Pvt Ltd, is led by founder Abhay Wankhade. With a focus on innovation and quality, Artizzdev specializes in React JS for frontend, Node JS for backend, and MongoDB or SQL for databases, ensuring robust and scalable solutions. 
+                <br/>We leverage Cloudflare for enhanced security and storage. Additionally, we build essential websites using WordPress, and HTML, CSS, and JS for structure and design. 
+                Our expertise in the MERN stack enables us to develop and deploy comprehensive web and app solutions efficiently.
+
                 </p>
               </div>
             </div>
@@ -62,52 +61,45 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section class="py-20 bg-white">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 class="font-manrope text-4xl text-center text-gray-900 font-bold mb-14">Our results in numbers</h2>
-          <div class="flex flex-col gap-5 xl:gap-8 lg:flex-row lg:justify-between">
-            <div
-              class="w-full max-lg:max-w-2xl mx-auto lg:mx-0 lg:w-1/3 bg-white p-6 rounded-2xl shadow-md shadow-gray-100">
-              <div class="flex gap-5">
-                <div class="font-manrope text-2xl font-bold text-indigo-600">
-                  240%
+      <section class="py-24 relative">
+        <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+            <div class="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
+                <div class="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
+                    <div class="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
+                        <img class="" src="https://pagedone.io/asset/uploads/1717741205.png" alt="about Us image" />
+                    </div>
+                    <img class="sm:ml-0 ml-auto" src="https://pagedone.io/asset/uploads/1717741215.png" alt="about Us image" />
                 </div>
-                <div class="flex-1">
-                  <h4 class="text-xl text-gray-900 font-semibold mb-2">Company growth</h4>
-                  <p class="text-xs text-gray-500 leading-5">Company's remarkable growth journey as we
-                    continually innovate and drive towards new heights of success.</p>
+                <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
+                    <div class="w-full flex-col justify-center items-start gap-8 flex">
+                        <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
+                            <h2 class="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">Nurturing Future Talent and Building Trust</h2>
+                            <p class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
+Beyond development, we offer training and internship programs to freshers, providing a strong foundation for their careers in the corporate industry. 
+<br/> With three years of freelancing experience, we've served five clients, enhancing their online presence and building long-term trust. 
+These clients have remained with us throughout this journey.</p>
+                        </div>
+                        <div class="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
+                            <div class="flex-col justify-start items-start inline-flex">
+                                <h3 class="text-gray-900 text-4xl font-bold font-manrope leading-normal">3+</h3>
+                                <h6 class="text-gray-500 text-base font-normal leading-relaxed">Years of Experience</h6>
+                            </div>
+                            <div class="flex-col justify-start items-start inline-flex">
+                                <h4 class="text-gray-900 text-4xl font-bold font-manrope leading-normal">5+</h4>
+                                <h6 class="text-gray-500 text-base font-normal leading-relaxed">Successful Projects</h6>
+                            </div>
+                            <div class="flex-col justify-start items-start inline-flex">
+                                <h4 class="text-gray-900 text-4xl font-bold font-manrope leading-normal">3+</h4>
+                                <h6 class="text-gray-500 text-base font-normal leading-relaxed">Happy Clients</h6>
+                            </div>
+                        </div>
+                    </div>
+                  
                 </div>
-              </div>
             </div>
-            <div
-              class="w-full max-lg:max-w-2xl mx-auto lg:mx-0 lg:w-1/3 bg-white p-6 rounded-2xl shadow-md shadow-gray-100">
-              <div class="flex gap-5">
-                <div class="font-manrope text-2xl font-bold text-indigo-600">
-                  175+
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-xl text-gray-900 font-semibold mb-2">Company growth</h4>
-                  <p class="text-xs text-gray-500 leading-5">Our very talented team members are the powerhouse
-                    of pagedone and pillars of our success. </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-full max-lg:max-w-2xl mx-auto lg:mx-0 lg:w-1/3 bg-white p-6 rounded-2xl shadow-md shadow-gray-100">
-              <div class="flex gap-5">
-                <div class="font-manrope text-2xl font-bold text-indigo-600">
-                  625+
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-xl text-gray-900 font-semibold mb-2">Projects Completed</h4>
-                  <p class="text-xs text-gray-500 leading-5">We have accomplished more than 625 projects
-                    worldwide and we are still counting many more.</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
+                                            
 
       <section class="py-14 lg:py-24 bg-gray-50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -215,26 +207,6 @@ const AboutUs = () => {
             </div>
           
           
-          </div>
-        </div>
-      </section>
-
-      <section class="py-20 ">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="bg-[#feb921] rounded-2xl p-8 xl:p-11">
-            <h2 class="font-manrope text-4xl text-white text-center font-bold mb-4">Subscribe to the latest offer
-            </h2>
-            <p class="text-indigo-200 text-center mb-11 max-lg:max-w-2xl mx-auto">Join our community of subscribers
-              and receive regular
-              updates delivered straight to your inbox. It's quick, easy, and free</p>
-            <div
-              class="max-w-md mx-auto lg:bg-transparent lg:border border-gray-300 rounded-3xl max-lg:py-3 lg:rounded-full lg:h-12 lg:p-1.5 lg:flex-row gap-6 lg:gap-0 flex-col flex items-center justify-between">
-              <input type="text" name="email"
-                class="py-2 px-6 bg-transparent rounded-full max-lg:border border-gray-300  text-gray-100 max-lg:text-center placeholder:text-gray-400 focus:outline-none flex-1 w-full lg:w-auto lg:py-2 lg:px-6 lg:bg-transparent"
-                placeholder="Enter your email.." />
-              <button type="submit"
-                class="py-2 px-5 text-sm bg-indigo-500 shadow-md rounded-full  text-white font-semibold hover:bg-indigo-700">Subscribe</button>
-            </div>
           </div>
         </div>
       </section>

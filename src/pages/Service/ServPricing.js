@@ -225,7 +225,7 @@ const ServPricing = () => {
               Our pricing plans
             </h2>
             <p className="text-gray-500 text-xl text-center leading-6 mb-12">
-              7 Days free trial. No credit card required.
+            Our Trusted Services 
             </p>
             <div className="mb-10 flex justify-center">
               <span className="flex items-center">
@@ -268,10 +268,10 @@ const ServPricing = () => {
               <div id="tabs-with-background-1" role="tabpanel" className={`tabcontent mt-20 ${activeTab === 'yearly' ? 'block' : 'hidden'}`}>
                 <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0">
                   <div className="group relative flex flex-col mx-auto w-full max-w-sm text-gray-900 rounded-2xl border border-solid border-gray-300 text-center transition-all duration-300 p-6 xl:p-12 hover:border-indigo-600">
-                    <h3 className="font-manrope text-2xl font-bold mb-6">Free</h3>
+                    <h3 className="font-manrope text-2xl font-bold mb-6">Basic Development</h3>
                     <div className="mb-20 flex flex-col">
                       <span className="font-manrope text-3xl font-semibold mb-2">$300</span>
-                      <span className="text-xl text-gray-400">Basic Development</span>
+                      <span className="text-xl text-gray-400">one Time</span>
                     </div>
                     <a href="javascript:;" className="py-4 px-8 bg-indigo-50 shadow-sm rounded-full transition-all duration-500 text-lg text-indigo-600 font-semibold text-center w-fit mx-auto group-hover:bg-indigo-600 group-hover:text-white">
                       Purchase Plan
@@ -284,7 +284,7 @@ const ServPricing = () => {
                     </h3>
                     <div className="mb-20 flex flex-col relative">
                       <span className="font-manrope text-3xl font-semibold mb-2 text-white">$1000-5000</span>
-                      <span className="text-xl text-gray-300">Per year</span>
+                      <span className="text-xl text-gray-300">one Time</span>
                     </div>
                     <a href="javascript:;" className="relative py-4 px-8 bg-white shadow-sm rounded-full transition-all duration-500 text-lg text-indigo-600 font-semibold text-center w-fit mx-auto">
                       Purchase Plan
@@ -294,7 +294,7 @@ const ServPricing = () => {
                     <h3 className="font-manrope text-2xl font-bold mb-6">Pro Development</h3>
                     <div className="mb-20 flex flex-col">
                       <span className="font-manrope text-3xl font-semibold mb-2">$5000 & above</span>
-                      <span className="text-xl text-gray-400">Per year</span>
+                      <span className="text-xl text-gray-400">one Time</span>
                     </div>
                     <a href="javascript:;" className="py-4 px-8 bg-indigo-50 shadow-sm rounded-full transition-all duration-500 text-lg text-indigo-600 font-semibold text-center w-fit mx-auto group-hover:bg-indigo-600 group-hover:text-white">
                       Purchase Plan
@@ -306,10 +306,10 @@ const ServPricing = () => {
               <div id="tabs-with-background-2" role="tabpanel" className={`tabcontent mt-20 ${activeTab === 'monthly' ? 'block' : 'hidden'}`}>
                 <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0">
                   <div className="group relative flex flex-col mx-auto w-full max-w-sm text-gray-900 rounded-2xl border border-solid border-gray-300 text-center transition-all duration-500 p-6 xl:p-12 hover:border-indigo-600">
-                    <h3 className="font-manrope text-2xl font-bold mb-6">Free</h3>
+                    <h3 className="font-manrope text-2xl font-bold mb-6">Basic Development</h3>
                     <div className="mb-20 flex flex-col">
-                      <span className="font-manrope text-6xl font-semibold mb-2">$0</span>
-                      <span className="text-xl text-gray-400">Lifetime</span>
+                      <span className="font-manrope text-6xl font-semibold mb-2">$100</span>
+                      <span className="text-xl text-gray-400">PER Month</span>
                     </div>
                     <a href="javascript:;" className="py-4 px-8 bg-indigo-50 shadow-sm rounded-full transition-all duration-500 text-lg text-indigo-600 font-semibold text-center w-fit mx-auto group-hover:bg-indigo-600 group-hover:text-white">
                       Purchase Plan
@@ -317,11 +317,11 @@ const ServPricing = () => {
                   </div>
                   <div className="group relative flex flex-col mx-auto w-full max-w-sm text-gray-900 rounded-2xl border border-solid border-gray-300 text-center transition-all duration-500 p-6 xl:p-12 bg-gradient-to-r from-indigo-600 to-violet-600 hover:before:opacity-100 before:contents[' '] before:absolute before:bg-indigo-800 before:w-full before:h-full before:top-0 before:left-0 before:rounded-2xl before:opacity-0 before:transition-all before:duration-500 before:z-0">
                     <h3 className="relative flex items-center justify-center font-manrope text-2xl font-bold mb-6 text-white">
-                      Advanced
-                      <span className="h-6 px-3 relative rounded-full border border-solid border-gray-100 text-sm ml-4">Popular</span>
+                    Advanced Development
+                    <span className="h-6 px-3 relative rounded-full border border-solid border-gray-100 text-sm ml-4">Popular</span>
                     </h3>
                     <div className="mb-20 flex flex-col relative">
-                      <span className="font-manrope text-6xl font-semibold mb-2 text-white">$15</span>
+                      <span className="font-manrope text-6xl font-semibold mb-2 text-white">$1500</span>
                       <span className="text-xl text-gray-300">Per month</span>
                     </div>
                     <a href="javascript:;" className="relative py-4 px-8 bg-white shadow-sm rounded-full transition-all duration-500 text-lg text-indigo-600 font-semibold text-center w-fit mx-auto">
@@ -329,9 +329,9 @@ const ServPricing = () => {
                     </a>
                   </div>
                   <div className="group relative flex flex-col mx-auto w-full max-w-sm text-gray-900 rounded-2xl border border-solid border-gray-300 text-center transition-all duration-500 p-6 xl:p-12 hover:border-indigo-600">
-                    <h3 className="font-manrope text-2xl font-bold mb-6">Premium</h3>
+                    <h3 className="font-manrope text-2xl font-bold mb-6">Pro Development</h3>
                     <div className="mb-20 flex flex-col">
-                      <span className="font-manrope text-6xl font-semibold mb-2">$12</span>
+                      <span className="font-manrope text-6xl font-semibold mb-2">$2500</span>
                       <span className="text-xl text-gray-400">Per month</span>
                     </div>
                     <a href="javascript:;" className="py-4 px-8 bg-indigo-50 shadow-sm rounded-full transition-all duration-500 text-lg text-indigo-600 font-semibold text-center w-fit mx-auto group-hover:bg-indigo-600 group-hover:text-white">
