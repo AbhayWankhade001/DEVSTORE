@@ -28,7 +28,7 @@ const ServIncen = () => {
                       <path d="M4.5 9.5V26C4.5 28.8284 4.5 30.2426 5.37868 31.1213C6.25736 32 7.67157 32 10.5 32H25.5C28.3284 32 29.7426 32 30.6213 31.1213C31.5 30.2426 31.5 28.8284 31.5 26V18.5C31.5 15.6716 31.5 14.2574 30.6213 13.3787C29.7426 12.5 28.3284 12.5 25.5 12.5H11.7426C10.0121 12.5 9.14685 12.5 8.34053 12.2702C7.89759 12.1439 7.47066 11.9671 7.06818 11.7431C6.3355 11.3355 5.72367 10.7237 4.5 9.5ZM4.5 9.5C4.5 8.10218 4.5 7.40326 4.72836 6.85195C5.03284 6.11687 5.61687 5.53284 6.35195 5.22836C6.90326 5 7.60218 5 9 5H24M27 22.25C27 23.4926 25.9926 24.5 24.75 24.5C23.5074 24.5 22.5 23.4926 22.5 22.25C22.5 21.0074 23.5074 20 24.75 20C25.9926 20 27 21.0074 27 22.25Z" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" />
                     </svg>
                   </button>
-                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> 7* day Payment </p>
+                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> Cost-effective </p>
                 </div>
                 <div class="box flex flex-col items-center">
                   <button class="rounded-full p-3 flex items-center justify-center mx-auto bg-white shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-50 hover:shadow-indigo-200">
@@ -37,7 +37,7 @@ const ServIncen = () => {
                       <path d="M21.5122 14.2461C21.5122 16.1203 19.9397 17.6396 18 17.6396C16.0603 17.6396 14.4878 16.1203 14.4878 14.2461C14.4878 12.3719 16.0603 10.8526 18 10.8526C19.9397 10.8526 21.5122 12.3719 21.5122 14.2461Z" stroke="#4F46E5" stroke-width="1.6" />
                     </svg>
                   </button>
-                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> Pan - India delivery </p>
+                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> Across the Globe Delivery </p>
                 </div>
                 <div class="box flex flex-col items-center">
                   <button class="rounded-full p-3 flex items-center justify-center mx-auto bg-white shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-50 hover:shadow-indigo-200">
@@ -45,7 +45,7 @@ const ServIncen = () => {
                       <path d="M25.5 32L30.4923 24.5115C30.9925 23.7613 31.2426 23.3862 31.3713 22.961C31.5 22.5359 31.5 22.085 31.5 21.1833V14.75C31.5 13.5074 30.4926 12.5 29.25 12.5C28.0074 12.5 27 13.5074 27 14.75V19.5C27 20.4912 27 20.9868 26.846 21.4487C26.6921 21.9105 26.3947 22.307 25.8 23.1L24.75 24.5M10.5 32L5.5077 24.5115C5.00753 23.7613 4.75745 23.3862 4.62872 22.961C4.5 22.5359 4.5 22.085 4.5 21.1833V14.75C4.5 13.5074 5.50736 12.5 6.75 12.5C7.99264 12.5 9 13.5074 9 14.75V19.5C9 20.4912 9 20.9868 9.15395 21.4487C9.3079 21.9105 9.60527 22.307 10.2 23.1L11.25 24.5M21 32V26.1847C21 24.0551 21 22.9903 21.4479 22.2655C21.8244 21.656 22.4066 21.2015 23.0892 20.984C23.901 20.7253 24.184 20.9833 26.25 21.4998M15 32V26.1847C15 24.0551 15 22.9903 14.5521 22.2654C14.1756 21.656 13.5934 21.2014 12.9108 20.9839C12.099 20.7252 11.816 20.9833 9.75 21.4998M13.2744 11.1311L18.0141 15.8006L22.9612 10.9268M18 6.01298C19.3709 4.66234 21.5987 4.66234 22.9697 6.01298C24.3406 7.36806 24.3406 9.5584 22.9742 10.9135M17.9979 6.01298C16.6269 4.66234 14.3992 4.66234 13.0282 6.01298C11.6573 7.36361 11.6573 9.55839 13.0282 10.909M13.0282 10.909L13.0398 10.9204M13.0282 10.909L13.2717 11.1267" stroke="#4F46E5" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </button>
-                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> 500000+ Seller </p>
+                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> Dedicated client support </p>
                 </div>
                 <div class="box flex flex-col items-center">
                   <button class="rounded-full p-3 flex items-center justify-center mx-auto bg-white shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-50 hover:shadow-indigo-200">
@@ -53,7 +53,7 @@ const ServIncen = () => {
                       <path d="M30.8 26C30.8 25.5582 30.4418 25.2 30 25.2C29.5582 25.2 29.2 25.5582 29.2 26H30.8ZM6.8 26C6.8 25.5582 6.44183 25.2 6 25.2C5.55817 25.2 5.2 25.5582 5.2 26H6.8ZM7.5 10.3H28.5V8.7H7.5V10.3ZM30.7 12.5V18.5H32.3V12.5H30.7ZM5.3 18.5V12.5H3.7V18.5H5.3ZM28.5 20.7H21V22.3H28.5V20.7ZM15 20.7H7.5V22.3H15V20.7ZM3.7 18.5C3.7 20.5987 5.40132 22.3 7.5 22.3V20.7C6.28497 20.7 5.3 19.715 5.3 18.5H3.7ZM30.7 18.5C30.7 19.715 29.715 20.7 28.5 20.7V22.3C30.5987 22.3 32.3 20.5987 32.3 18.5H30.7ZM28.5 10.3C29.715 10.3 30.7 11.285 30.7 12.5H32.3C32.3 10.4013 30.5987 8.7 28.5 8.7V10.3ZM7.5 8.7C5.40132 8.7 3.7 10.4013 3.7 12.5H5.3C5.3 11.285 6.28497 10.3 7.5 10.3V8.7ZM29.2 26V29H30.8V26H29.2ZM27 31.2H9V32.8H27V31.2ZM6.8 29V26H5.2V29H6.8ZM9 31.2C7.78497 31.2 6.8 30.215 6.8 29H5.2C5.2 31.0987 6.90132 32.8 9 32.8V31.2ZM29.2 29C29.2 30.215 28.215 31.2 27 31.2V32.8C29.0987 32.8 30.8 31.0987 30.8 29H29.2ZM16.5 19.3H19.5V17.7H16.5V19.3ZM20.2 20V23H21.8V20H20.2ZM19.5 23.7H16.5V25.3H19.5V23.7ZM15.8 23V20H14.2V23H15.8ZM16.5 23.7C16.1134 23.7 15.8 23.3866 15.8 23H14.2C14.2 24.2703 15.2297 25.3 16.5 25.3V23.7ZM20.2 23C20.2 23.3866 19.8866 23.7 19.5 23.7V25.3C20.7703 25.3 21.8 24.2703 21.8 23H20.2ZM19.5 19.3C19.8866 19.3 20.2 19.6134 20.2 20H21.8C21.8 18.7297 20.7703 17.7 19.5 17.7V19.3ZM16.5 17.7C15.2297 17.7 14.2 18.7297 14.2 20H15.8C15.8 19.6134 16.1134 19.3 16.5 19.3V17.7ZM15 5.8H21V4.2H15V5.8ZM21.7 6.4997V8.35742H23.3V6.4997H21.7ZM14.3 8.35742V6.4997H12.7V8.35742H14.3ZM21 5.8C21.3868 5.8 21.7 6.11331 21.7 6.4997H23.3C23.3 5.22924 22.27 4.2 21 4.2V5.8ZM15 4.2C13.73 4.2 12.7 5.22924 12.7 6.4997H14.3C14.3 6.11331 14.6132 5.8 15 5.8V4.2Z" fill="#4F46E5" />
                     </svg>
                   </button>
-                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> Account Management </p>
+                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> Tailored account management </p>
                 </div>
                 <div class="box flex flex-col items-center">
                   <button class="rounded-full p-3 flex items-center justify-center mx-auto bg-white shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-50 hover:shadow-indigo-200">
@@ -61,7 +61,7 @@ const ServIncen = () => {
                       <path d="M27 5V9.71405M27 5H21.9785M27 5L15.0389 15.6321C14.5876 16.0332 14.362 16.2338 14.1198 16.3311C13.7326 16.4867 13.298 16.4739 12.9205 16.2958C12.6845 16.1845 12.471 15.971 12.0441 15.5441C11.5939 15.0939 11.3688 14.8688 11.1218 14.7563C10.7268 14.5763 10.2732 14.5763 9.87819 14.7563C9.63123 14.8688 9.40613 15.0939 8.95592 15.5441L6 18.5M6 32H9C9.82843 32 10.5 31.3284 10.5 30.5V26C10.5 25.1716 9.82843 24.5 9 24.5H6C5.17157 24.5 4.5 25.1716 4.5 26V30.5C4.5 31.3284 5.17157 32 6 32ZM16.5 32H19.5C20.3284 32 21 31.3284 21 30.5V21.5C21 20.6716 20.3284 20 19.5 20H16.5C15.6716 20 15 20.6716 15 21.5V30.5C15 31.3284 15.6716 32 16.5 32ZM27 32H30C30.8284 32 31.5 31.3284 31.5 30.5V15.5C31.5 14.6716 30.8284 14 30 14H27C26.1716 14 25.5 14.6716 25.5 15.5V30.5C25.5 31.3284 26.1716 32 27 32Z" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </button>
-                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> 100+ Startups </p>
+                  <p class="mt-2 w-[92px] text-center font-medium text-sm text-black"> Proven track record with multiple clients </p>
                 </div>
               </div>
             </div>
