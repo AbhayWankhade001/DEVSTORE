@@ -18,6 +18,7 @@ import InternshipForm from './pages/User/Internship.js';
 import ReviewForm from './pages/User/Ratingform';
 import Subs from './pages/Subscribe/subs';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import Carrier from './pages/carrier/Carrier.js';
 ReactGA.initialize('G-3L0S0NBRMP');
 
 
@@ -51,6 +52,7 @@ const App = () => {
       <Route path="/Register" element={<Registertion/>} />
       <Route path="/Login" element={<Login/>} />
       <Route path="/internship" element={<InternshipForm/>} />
+      <Route path="/carrier" element={<Carrier/>} />
     </Routes>
     
 
