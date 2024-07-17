@@ -15,7 +15,7 @@ const ServIncen = () => {
                 </svg>
                 <input type="text" name="text" id="" placeholder="Enter 10 digit here...." class="w-3/5	outline-none border-none font-normal text-base py-[1px] text-gray-400 bg-transparent"/>
               </div>
-              <button class="bg-indigo-600 rounded-[100px] py-[13px] px-6 font-semibold text-sm text-white whitespace-nowrap focus-within:outline-0 shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">Get Incentive</button>
+              <button class="bg-indigo-600 rounded-[100px] py-[13px] px-6 font-semibold text-sm text-white whitespace-nowrap focus-within:outline-0 shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">Book A Call Now</button>
             </form>
           </div>
           <div class="col-span-10 lg:col-span-6 w-full">
