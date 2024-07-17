@@ -9,6 +9,7 @@ import { ReactComponent as Bolt}  from './bolt-lightning-svgrepo-com.svg';
 import { ReactComponent as Brand}  from './Brandd.svg';
 import { ReactComponent as AutoM}  from './automation-marketing-launch-rocket-laptop-svgrepo-com.svg';
 import { ReactComponent as Plug}  from './puzzle-piece-01-svgrepo-com.svg';
+import { ReactComponent as Student}  from './student-svgrepo-com.svg';
 
 const ServFeatures = () => {
   return (
@@ -145,6 +146,20 @@ const ServFeatures = () => {
                 </div>
                 <h3 class="mt-8 text-lg font-semibold text-black">Plugin Ecosystem Mastery</h3>
                 <p class="mt-4 text-base text-gray-600">Cultivating custom themes and plugins, ensuring functionality and aesthetics blend seamlessly.</p>
+            </div>
+            <div>
+                <div class="relative flex items-center justify-center mx-auto">
+                    <svg class="text-lime-100" width="62" height="65" viewBox="0 0 62 65" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 13.0264C0 33.4609 8.06546 64.0264 28.5 64.0264C48.9345 64.0264 62 50.4604 62 30.0259C62 9.59135 59.4345 4.0256 39 4.0256C18.5655 4.0256 0 -7.40819 0 13.0264Z" />
+                    </svg>
+
+                    <div class="absolute text-blue-600 w-9 h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <Student class="absolute text-blue-600 w-9 h-9"/>
+                    </div>
+                </div>
+                <h3 class="mt-8 text-lg font-semibold text-black">Internship & Training Program
+                </h3>
+                <p class="mt-4 text-base text-gray-600">Offering hands-on training and real-world project experience to equip students with practical skills and industry knowledge.</p>
             </div>
         </div>
     </div>
