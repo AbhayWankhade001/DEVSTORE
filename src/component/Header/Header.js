@@ -409,6 +409,14 @@ const Header = () => {
                   {' '}
                   <Link to='/ContactUs'>Contact Us</Link>{' '}
                 </motion.a>
+                <motion.a
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5  , delay: 0.6}}
+                 href="#" title="" className="text-base font-medium text-black">
+                  {' '}
+                  <Link to='/carrier'>Career</Link>{' '}
+                </motion.a>
                 {/* <motion.a
                 style={{display:'none'}}
                   initial={{ opacity: 0, x: -20 }}
