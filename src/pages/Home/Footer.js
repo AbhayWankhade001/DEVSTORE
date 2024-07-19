@@ -1,38 +1,82 @@
-
-import logo from './Artizz_Dev_Bg_Removed.png'
-import React, { useState , useRef, useEffect} from 'react';
-
-
-
+import logo from './Artizz_Dev_Bg_Removed.png';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+
 export const Footer = () => {
-    const [ref, inView] = useInView({
-        triggerOnce: true, // Ensures the animation triggers only once
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Ensures the animation triggers only once
+  });
+
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      alert('Please enter an email address');
+      return;
+    }
+console.log(email)
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://artizz.in/wp-json/email-manager/v1/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
       });
+
+      if (response.ok) {
+        alert('Subscribed successfully!');
+        setEmail('');
+      } else {
+        alert('Failed to subscribe. Please try again.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again.');
+    }
+
+    setIsSubmitting(false);
+  };
+
   return (
     <motion.div
-    ref={ref}
-      initial={{ opacity: 0}}
-      animate={inView ? { opacity: 1} : { opacity: 0}}
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{
         duration: 0.8,
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01],
-        
       }}
-      style={{zIndex:"999999"}}
-      >
-                                                        <section class="py-16 bg-indigo-600">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="font-manrope text-5xl text-white text-center font-bold mb-14">Subscribe Newsletter </h2>
-            <div class="flex items-center justify-center flex-col gap-4 sm:flex-row">
-                <input type="text" name="email" class="py-2.5 px-5 h-14 w-full md:max-w-md border border-gray-300 bg-indigo-500 shadow-sm rounded-full text-lg text-white focus:outline-none placeholder:text-indigo-200" placeholder="Your mail id.."/>
-                <button class="h-14 py-3.5 px-7 bg-white shadow-sm rounded-full text-indigo-600 font-semibold">Subscribe</button>
-            </div>
-           
-      </div>
-    </section>
+      style={{ zIndex: '999999' }}
+    >
+      <section className="py-16 bg-indigo-600">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-manrope text-5xl text-white text-center font-bold mb-14">Subscribe Newsletter</h2>
+          <div className="flex items-center justify-center flex-col gap-4 sm:flex-row">
+            <input
+              type="text"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="py-2.5 px-5 h-14 w-full md:max-w-md border border-gray-300 bg-indigo-500 shadow-sm rounded-full text-lg text-white focus:outline-none placeholder:text-indigo-200"
+              placeholder="Your mail id.."
+              disabled={isSubmitting}
+            />
+            <button
+              className="h-14 py-3.5 px-7 bg-white shadow-sm rounded-full text-indigo-600 font-semibold"
+              onClick={handleSubscribe}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+            </button>
+          </div>
+        </div>
+      </section>
+
                                             
         <footer class="w-full py-14">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
