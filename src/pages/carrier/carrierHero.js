@@ -12,7 +12,7 @@ const CarrierHero = () => {
         }
 
         try {
-            const response = await fetch('https://artizz.store/api/traniningEmails', {
+            const response = await fetch('https://devstore-backend.vercel.app/api/traniningEmails', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
