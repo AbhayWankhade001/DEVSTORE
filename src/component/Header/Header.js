@@ -469,13 +469,11 @@ Login
           className={` bg-white/[0.5] rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 text-black w-64 flex-shrink-0 p-4 fixed inset-y-0 left-0 z-40 lg:hidden 
           ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}
         >
-          <div className="mb-12">
-            <h1 className="text-2xl font-semibold"></h1>
-          </div>
+        
           <AnimatePresence>
             {isSidebarOpen && (
               <motion.ul
-                className="space-y-2"
+                className="space-y-2 mt-32"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -495,8 +493,7 @@ Login
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
                   <a  className="block p-2 rounded hover:black">
-                  <Link to='/Home' > Home</Link>
-                  </a>
+                  <Link to='/'>Home</Link>{' '}                  </a>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, y: -20 }}
