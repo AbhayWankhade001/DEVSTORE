@@ -1,8 +1,45 @@
 import { useState, useEffect } from "react";
 import videolaps from '../timeslap2.mp4'
 const CarrierHero = () => {
+    const [email, setEmail] = useState('');
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        if (!email) {
+            alert('Please enter an email address.');
+            return;
+        }
 
+        try {
+            const response = await fetch('https://artizz.store/api/traniningEmails', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            if (response.ok) {
+                alert('Email added successfully!');
+                setEmail(''); // Clear the input after successful submission
+            }else if(response.status === 500){
+                const data = await response.json();
+
+                console.log('duplicate key')
+                alert(data.message || 'already subscribed');
+
+            }
+             else {
+                const data = await response.json();
+                alert(data.message || 'Failed to add email');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        }
+    };
+console.log(email)
     return (
         <div className="bg-gray-900 ">
        <video
@@ -22,14 +59,20 @@ const CarrierHero = () => {
                         <p className="max-w-2xl mx-auto text-gray-400">
                         Start a bright future with our 6-month program offering hands-on training, live projects, and comprehensive profile development.                        </p>
                         <form
-                            onSubmit={(e) => e.preventDefault()}
-                            className="justify-center items-center gap-x-3 sm:flex">
+                            onSubmit={handleSubmit}
+                            className="justify-center items-center gap-x-3 sm:flex"
+                        >
                             <input
                                 type="text"
                                 placeholder="Enter your email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 className="w-full px-3 py-2.5 text-gray-400 bg-slate-950/[.60] focus:bg-gray-900 duration-150 outline-none rounded-lg shadow sm:max-w-sm sm:w-auto"
                             />
-                            <button className="flex items-center justify-center gap-x-2 py-2.5 px-4 mt-3 w-full text-sm text-white font-medium bg-indigo-600 hover:bg-sky-400 active:bg-sky-600 duration-150 rounded-lg sm:mt-0 sm:w-auto">
+                            <button
+                                type="submit"
+                                className="flex items-center justify-center gap-x-2 py-2.5 px-4 mt-3 w-full text-sm text-white font-medium bg-indigo-600 hover:bg-sky-400 active:bg-sky-600 duration-150 rounded-lg sm:mt-0 sm:w-auto"
+                            >
                                 Get started
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path fillRule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clipRule="evenodd" />
