@@ -277,7 +277,7 @@
 // };
 
 // export default Header;
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import logoImage from '../Horizontal_Lockup_on_White_Background-removebg-preview.png';
 import { motion, AnimatePresence } from "framer-motion";
@@ -292,6 +292,28 @@ const Header = () => {
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
+
+
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const sidebar = document.getElementById('sidebar');
+      const toggleButton = document.getElementById('sidebarToggle');
+      if (sidebar && !sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+        closeSidebar();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
 
   const [ref, inView] = useInView({
     triggerOnce: true, // Ensures the animation triggers only once
