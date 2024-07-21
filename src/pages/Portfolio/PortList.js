@@ -1,4 +1,18 @@
 import React from 'react'
+import IMG2 from './Learnthru_ Manage your online courses _ e-Learning Dashboard.jpeg'
+import IMG3 from './E-commerce website design.jpeg'
+import IMG4 from './Transport Management System – Dashboard CRM.jpeg'
+import IMG5 from './documents_png by Kevin Dukkon.jpeg'
+import IMG6 from './Picture4.png'
+import IMG7 from './Picture1.png'
+import IMG8 from './Picture2.png'
+import IMG9 from './Picture3.png'
+import IMG10 from './21908513_6525460.jpg'
+import IMG11 from './SDK_Logo.png'
+import IMG12 from './cropped-WhatsApp-Image-2022-10-08-at-4.42.28-PM-e1665232231232.jpeg'
+import IMG13 from './Group-1001.png'
+import IMG14 from './logo.png'
+import IMG15 from './App-logo-2-01-1-300x300.png'
 
 const PortList = () => {
 
@@ -10,58 +24,58 @@ const PortList = () => {
                                                         <section class="py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 class="font-manrope font-bold text-4xl text-black mb-8 max-lg:text-center">
-                Product list
-            </h2>
+
+Our In House Projects            </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <a href="javascript:;" class="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
                     <div class="">
-                        <img src="https://pagedone.io/asset/uploads/1700726158.png" alt="face cream image" class="w-full aspect-square"/>
+                        <img src={IMG2} alt="face cream image" class="w-72 rounded-2xl aspect-square"/>
                     </div>
                     <div class="mt-5">
                         <div class="flex items-center justify-between">
-                            <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Face cream</h6>
-                            <h6 class="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
+                            <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">OLearning Platform</h6>
+                            <h6 class="font-semibold text-sm leading-8 text-indigo-600">MERN</h6>
                         </div>
-                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Orange & Aloe Vera</p>
+                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Under Development</p>
                     </div>
                 </a>
 
                 <a href="javascript:;" class="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
                     <div class="">
-                        <img src="https://pagedone.io/asset/uploads/1700726174.png" alt="plastic bottle image" class="w-full aspect-square"/>
+                    <img src={IMG3} alt="face cream image" class="w-72 rounded-2xl aspect-square"/>
                     </div>
                     <div class="mt-5">
                         <div class="flex items-center justify-between">
-                            <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Plstic bottle</h6>
-                            <h6 class="font-semibold text-xl leading-8 text-indigo-600">$40</h6>
+                            <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">E-commerce Store</h6>
+                            <h6 class="font-semibold text-md leading-8 text-indigo-600">MERN</h6>
                         </div>
-                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Black color</p>
+                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Under Development</p>
                     </div>
                 </a>
 
                 <a href="javascript:;" class="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
                     <div class="">
-                        <img src="https://pagedone.io/asset/uploads/1700726191.png" alt="cream image" class="w-full aspect-square"/>
+                    <img src={IMG4} alt="face cream image" class="w-72 rounded-2xl aspect-square"/>
                     </div>
                     <div class="mt-5">
                         <div class="flex items-center justify-between">
-                            <h6 class="font-semibold text-xl leading-8 text-black  transition-all duration-500 group-hover:text-indigo-600">Men cream</h6>
-                            <h6 class="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
+                            <h6 class="font-semibold text-xl leading-8 text-black  transition-all duration-500 group-hover:text-indigo-600">CRM System</h6>
+                            <h6 class="font-semibold text-md leading-8 text-indigo-600">MERN</h6>
                         </div>
-                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Aloe Vera and Neem</p>
+                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Under Development</p>
                     </div>
                 </a>
 
                 <a href="javascript:;" class="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
                     <div class="">
-                        <img src="https://pagedone.io/asset/uploads/1700726207.png" alt="perfume bottle image" class="w-full aspect-square"/>
+                    <img src={IMG5} alt="face cream image" class="w-72 rounded-2xl aspect-square"/>
                     </div>
                     <div class="mt-5">
                         <div class="flex items-center justify-between">
-                            <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Cold Perfume</h6>
-                            <h6 class="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
+                            <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Management Tool</h6>
+                            <h6 class="font-semibold text-md leading-8 text-indigo-600">MERN</h6>
                         </div>
-                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">White perfume</p>
+                        <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Under Development</p>
                     </div>
                 </a>
             </div>
@@ -72,50 +86,61 @@ const PortList = () => {
 
                                                                  <section class="py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="font-manrope font-bold text-4xl text-black mb-8 max-xl:text-center">New Arrivals</h2>
+            <h2 class="font-manrope font-bold text-4xl text-black mb-8 max-xl:text-center">Our Happy Clients</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
                 <a href="javascript:;" class="relative bg-cover group rounded-3xl bg-center overflow-hidden mx-auto sm:mr-0 xl:mx-auto cursor-pointer">
-                    <img src="https://pagedone.io/asset/uploads/1700731972.png" alt="Jacket image"/>
-                    <div
+                <img src={IMG6} alt="Vokitoki" class="w-full h-72 border-y-2 border-black-200 object-left object-cover rounded-2x1 aspect-square"/>
+                <div
                         class="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
                         <div class="flex items-center justify-between mb-2">
-                            <h6 class="font-semibold text-base leading-7 text-black ">Trendy Jacket</h6>
-                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">$100</h6>
+                            <h6 class="font-semibold text-base leading-7 text-black ">vokitoki</h6>
+                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">
+                                <img src={IMG15} className='w-8 h-8' alt=''/>
+                            </h6>
                         </div>
-                        <p class="text-xs leading-5 text-gray-500">Women's Winter Wear</p>
+                        <p class="text-xs leading-5 text-gray-500">Startup</p>
                     </div>
                 </a>
-                <a href="javascript:;" class="relative bg-cover group rounded-3xl bg-center overflow-hidden mx-auto sm:ml-0 xl:mx-auto cursor-pointer">
-                    <img src="	https://pagedone.io/asset/uploads/1700731993.png" alt="Blazer image"/>
-                    <div
-                        class="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
-                        <div class="flex items-center justify-between mb-2">
-                            <h6 class="font-semibold text-base leading-7 text-black ">Black Blazer</h6>
-                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">$100</h6>
-                        </div>
-                        <p class="text-xs leading-5 text-gray-500">Men’s Suits</p>
-                    </div>
-                </a>
+             
                 <a href="javascript:;" class="relative bg-cover group rounded-3xl bg-center overflow-hidden mx-auto sm:mr-0 xl:mx-auto cursor-pointer">
-                    <img src="	https://pagedone.io/asset/uploads/1700732011.png" alt="printed top image"/>
+                <img src={IMG8} alt="Delko_img" class="w-full h-72 border-y-2 border-black-200 object-left object-cover rounded-2x1 aspect-square"/>
                     <div
                         class="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
                         <div class="flex items-center justify-between mb-2">
-                            <h6 class="font-semibold text-base leading-7 text-black ">Red Flowers</h6>
-                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">$100</h6>
+                            <h6 class="font-semibold text-base leading-7 text-black ">Delko beach house</h6>
+                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">
+                            <img src={IMG14} className='w-12 h-6' alt=''/>
+                            </h6>
                         </div>
-                        <p class="text-xs leading-5 text-gray-500">Womenswear</p>
+                        <p class="text-xs leading-5 text-gray-500">Beach House</p>
                     </div>
                 </a>
 
                 <a href="javascript:;" class="relative bg-cover group rounded-3xl bg-center overflow-hidden mx-auto sm:ml-0 xl:mx-auto cursor-pointer">
-                    <img src="https://pagedone.io/asset/uploads/1700732027.png" alt="Denim jacket image"/>
+                <img src={IMG7} alt="Vokitoki" class="w-full h-72 border-y-2 border-black-200 object-left object-cover rounded-2x1 aspect-square"/>
+                    <div
+                        class="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
+                        <div class="flex items-center justify-between mb-2">
+                            <h6 class="font-semibold text-base leading-7 text-black ">SDK</h6>
+                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">
+                            <img src={IMG11} className='w-12 h-8' alt=''/>
+
+                            </h6>
+                        </div>
+                        <p class="text-xs leading-5 text-gray-500">furniture store</p>
+                    </div>
+                </a>
+
+                <a href="javascript:;" class="relative bg-cover group rounded-3xl bg-center overflow-hidden mx-auto sm:ml-0 xl:mx-auto cursor-pointer">
+                <img src={IMG9} alt="Business fundamentals" class="w-full h-72 border-y-2 border-black-200 object-left object-cover rounded-2x1 aspect-square"/>
                     <div class="absolute z-10 bottom-3 left-0 mx-3 p-3 bg-white w-[calc(100%-24px)] rounded-xl shadow-sm shadow-transparent transition-all duration-500 group-hover:shadow-indigo-200 group-hover:bg-indigo-50">
                         <div class="flex items-center justify-between mb-2">
-                            <h6 class="font-semibold text-base leading-7 text-black ">Denim Jacket</h6>
-                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">$100</h6>
+                            <h6 class="font-semibold text-base leading-7 text-black ">Business Fundamentals</h6>
+                            <h6 class="font-semibold text-base leading-7 text-indigo-600 text-right">
+                            <img src={IMG12} className='w-12 h-6' alt=''/> 
+                            </h6>
                         </div>
-                        <p class="text-xs leading-5 text-gray-500">Children Wear</p>
+                        <p class="text-xs leading-5 text-gray-500">Consulting Company</p>
                     </div>
                 </a>
             </div>
@@ -124,7 +149,7 @@ const PortList = () => {
                                                                        
 
 
-    <section class="py-24">
+    <section class="py-24 hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 class="font-manrope font-bold text-3xl min-[400px]:text-4xl text-black mb-8 max-lg:text-center">Available Products</h2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -202,7 +227,7 @@ const PortList = () => {
                                             
 
 
-    <section class="py-24 relative">
+    <section class="py-24 relative hidden">
         <div class="w-full max-w-7xl px-6 lg:px-8 mx-auto">
             <div class="flex items-center justify-center flex-col gap-5 mb-14">
                 <span class='bg-indigo-50 text-indigo-500 text-xs font-medium px-3.5 py-1 rounded-full'>Portfolio</span>
