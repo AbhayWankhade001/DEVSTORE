@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import './tailwind.css'; // Import Tailwind CSS
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

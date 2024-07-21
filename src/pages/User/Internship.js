@@ -15,6 +15,7 @@ const InternshipForm = () => {
     friendName: '',
     phoneNumber: '' // Added phoneNumber field
   });
+  console.log(formData)
 
   const [showFriendName, setShowFriendName] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -30,6 +31,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
       setShowFriendName(false);
     }
   };
+  console.log(formData)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,7 +50,7 @@ const Razpay = process.env.REACT_APP_RAZPAY_KEY;
         throw new Error('Network response was not ok');
       }
       const formDataResult = await response.json();
-
+console.log(formData)
       // Redirect to Razorpay payment page
       const options = {
         key: Razpay,
